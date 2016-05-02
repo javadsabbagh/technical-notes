@@ -1,0 +1,112 @@
+
+When creating a new repository in Github:
+It shows you a messsage hot to initialize the repo.
+1- …or create a new repository on the command line
+
+echo "# technical-notes" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/javadsabbagh/technical-notes.git
+git push -u origin master
+
+2- …or push an existing repository from the command line
+
+git remote add origin https://github.com/javadsabbagh/technical-notes.git
+git push -u origin master
+
+
+
+
+
+
+Tagging
+---------------------------------------------------
+Listing Your Tags:
+$ git tag
+v0.1
+v1.3
+
+Search for tags with a particular pattern:
+$ git tag -l "v1.8.5*"
+v1.8.5
+v1.8.5-rc0
+v1.8.5-rc1
+v1.8.5-rc2
+v1.8.5-rc3
+v1.8.5.1
+v1.8.5.2
+v1.8.5.3
+v1.8.5.4
+v1.8.5.5
+
+Creating Tags
+two main types of tags: lightweight and annotated.
+
+A lightweight tag is very much like a branch that doesn’t change – it’s just a
+pointer to a specific commit.
+
+Annotated tags, however, are stored as full objects in the Git database.
+They’re checksummed; contain the tagger name, email, and date; have a tagging
+message; and can be signed and verified with GNU Privacy Guard (GPG).
+It’s generally recommended that you create annotated tags so you can have all
+this information.
+
+Annotated Tags
+$ git tag -a v1.4 -m "my version 1.4"
+$ git tag
+v0.1
+v1.3
+v1.4
+
+If you don’t specify a message for an annotated tag, Git launches your editor so you can
+type it in.
+
+see the tag data
+$ git show v1.4
+
+
+Lightweight Tags
+To create a lightweight tag, don’t supply the -a, -s, or -m option:
+
+$ git tag v1.4-lw
+$ git tag
+v0.1
+v1.3
+v1.4
+v1.4-lw
+v1.5
+
+
+$ git show v1.4-lw
+
+
+
+Git Aliases
+---------------------------------------------------
+$ git config --global alias.co checkout
+$ git config --global alias.br branch
+$ git config --global alias.ci commit
+$ git config --global alias.st status
+
+This technique can also be very useful in creating commands that you think
+should exist. e.g.
+
+$ git config --global alias.unstage 'reset HEAD --'
+
+This makes the following two commands equivalent:
+$ git unstage fileA          # a lot easier  to remember
+$ git reset HEAD -- fileA    # original command, hard to remember
+
+
+Another example :
+
+$ git config --global alias.last 'log -1 HEAD'
+$ git last
+
+
+________________________________________________________________________________
+
+Git’s killer feature: its branching model.
+
+
