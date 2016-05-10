@@ -1,0 +1,44 @@
+
+RxJS v4.0
+	http://xgrommx.github.io/rx-book/
+
+
+Javascript Questions	
+	http://javascript-puzzlers.herokuapp.com/
+	
+Javascript Collections
+	http://stackoverflow.com/questions/12973706/javascript-collection
+	http://www.i-programmer.info/programming/javascript/1504-j.html
+	
+	collections.js
+		http://www.collectionsjs.com/
+		
+	https://www.codecademy.com/courses/code-javascript-collections/0/1
+	
+	https://facebook.github.io/immutable-js/
+
+
+Webpack-howto
+	https://webpack.github.io/   : official online document
+	
+	https://github.com/petehunt/webpack-howto/tree/master/example
+	
+	Webpack for React
+		https://github.com/petehunt/react-webpack-template  : sample codebase
+		http://www.pro-react.com/materials/appendixA/       :  document
+		
+	Beginners Guide
+		https://medium.com/@dabit3/beginner-s-guide-to-webpack-b1f1a3638460
+
+	http://survivejs.com/webpack_react/developing_with_webpack/
+	
+	
+Browserify		
+	http://browserify.org/
+	http://www.sitepoint.com/getting-started-browserify/
+
+Uglify
+	http://lisperator.net/uglifyjs/
+	https://www.npmjs.com/package/gulp-uglify
+	
+		
