@@ -1,0 +1,82 @@
+Articles:
+
+10 Best ReactJS Tutorials With Examples
+	http://noeticforce.com/best-reactjs-tutorials-with-examples
+
+Reactjs by example
+	http://reactkungfu.com/showcases/
+	
+	Several nice samples
+		Password strength meter
+		Prefixer
+		Filtering list
+		Preventive button
+		Fancy placeholders
+		Icon selector
+		Two lists
+		Reddit articles
+		Invoice
+		Sortable table
+		Tweet box
+		Credit card input
+
+
+What React component class syntax should I use
+	http://reactkungfu.com/2015/07/what-react-component-class-syntax-should-i-use/
+	
+	
+Why are we using React.js in our projects
+	http://reactkungfu.com/2015/07/why-are-we-using-react-js-in-our-projects/
+	
+https://www.quora.com/Where-can-I-find-the-best-React-js-tutorial-PDF
+
+
+The Only React.js Tutorials and Resources You’ll Need
+	http://spyrestudios.com/the-only-react-js-tutorials-and-resources-youll-need/
+	
+
+React vs AngularJS – How the two Compare
+	https://www.codementor.io/reactjs/tutorial/react-vs-angularjs
+
+	
+React Tutorial: Creating a Simple Application Using React JS and Flux Architecture
+	https://www.codementor.io/reactjs/tutorial/react-js-flux-architecture-tutorial
+	
+React.js tutorial - Creating components
+	http://ghost.stevenisekimart.in/react-js-tutorial-creating-components/
+
+React Components	
+	http://react-components.com/
+
+Integrating React.js into Existing jQuery Web Applications
+	http://winterbe.com/posts/2015/08/24/integrate-reactjs-into-jquery-webapps/
+	
+--------------------------------------------------------------------------------
+Components:
+
+https://github.com/esbullington/react-d3
+http://jonmiles.github.io/bootstrap-treeview/
+http://react-bootstrap.github.io/components.html
+http://wwayne.com/react-tooltip/
+http://zippyui.com/react-datagrid/#/examples/basic
+http://allenfang.github.io/react-bootstrap-table/index.html
+https://github.com/jquense/react-widgets	
+http://jquense.github.io/react-widgets/docs/#/getting-started?_k=rku5en
+https://github.com/fmoo/react-typeahead
+https://github.com/casesandberg/react-color
+https://github.com/kirjs/react-highcharts
+https://github.com/nickbalestra/webpack-react-starter-kit
+https://github.com/petehunt/react-howto
+https://github.com/haridusenadeera/react-navbar
+https://github.com/kriasoft/react-starter-kit
+https://github.com/unboundfire/example-react-dashboard
+https://github.com/nickbalestra/webpack-react-starter-kit
+
+Compatibility:
+	http://kangax.github.io/compat-table/es6/
+
+Search react & react-bootstrap on github
+
+
+
+	
