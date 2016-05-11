@@ -80,7 +80,7 @@ React online documents:
 --------------------------------------------------------------------------------
 Components:
 
-A very powerful table for web/javasript. It has many features:: treetables,grouping, keytable(excel like), annd many more extensions. 
+A very powerful table for web/javasript. It has many features: treetables,grouping, keytable(excel like), annd many more extensions. 
 	https://datatables.net/examples/api/form.html
 	https://datatables.net/extensions/keytable/
 	https://editor.datatables.net/
@@ -129,9 +129,9 @@ Another useful bootstrap table ccomponent, however it is not ready for React:
 	
 Another bootstrap table component:
 	https://editor.datatables.net/examples/styling/bootstrap.html
-	https://github.com/shakacode/bootstrap-loader
 	
 bootstrap-loader
+	https://github.com/shakacode/bootstrap-loader
 	https://github.com/shakacode/bootstrap-loader/tree/master/examples/basic
 	
 Bootstrap Studio:
@@ -161,7 +161,6 @@ https://github.com/fmoo/react-typeahead
 https://github.com/casesandberg/react-color
 https://github.com/kirjs/react-highcharts
 https://github.com/nickbalestra/webpack-react-starter-kit
-https://github.com/petehunt/react-howto
 https://github.com/haridusenadeera/react-navbar
 https://github.com/kriasoft/react-starter-kit
 https://github.com/unboundfire/example-react-dashboard

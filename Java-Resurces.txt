@@ -35,5 +35,12 @@ JSP:
 	http://stackoverflow.com/questions/2095397/what-is-the-difference-between-jsf-servlet-and-jsp/2097732#2097732
 	http://stackoverflow.com/questions/8025460/why-does-jsp-and-jstl-el-take-a-different-way-to-perform-a-resource-injection
 	
+	
+Eclipse Mars (4.5)
+Eclipse Luna (4.4)
+Eclipse Kepler (4.3)
+Eclipse Juno (4.2)
+
+	
 
 	
