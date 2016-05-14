@@ -172,5 +172,28 @@ Compatibility:
 Search react & react-bootstrap on github
 
 
+AlloyUI
+	Source code on github
+		https://github.com/liferay/alloyui.com
+		
+	AlloyUI Datatable
+		http://alloyui.com/examples/datatable/real-world/
+		
+	A really nice alloy editor:
+		http://alloyeditor.com/features/
+		https://github.com/liferay/alloy-editor
+		
+	AlloyUI website source code:
+		https://github.com/liferay/alloy-editor
+	
+	Taglibs to use in JSP pages (useful in JSP pages, also could be imitated for React, though React is like making custom tags easily in JavasScript)
+	 However, it is muuch powerful and flexible than taglibs.
+		https://github.com/liferay/alloy-taglibs/tree/master/alloy-web
+		
+	https://github.com/liferay/alloy-chat-launcher
+	
+		
+	
+
 
 	
