@@ -77,6 +77,11 @@ React online documents:
 		https://facebook.github.io/react/tips/if-else-in-JSX.html
 		https://facebook.github.io/react/docs/animation.html
 		
+Books:
+	ReactJS by Example – Building Modern Web Applications with React
+
+
+		
 --------------------------------------------------------------------------------
 Components:
 
