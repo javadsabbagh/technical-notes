@@ -1,0 +1,110 @@
+Links:	
+	https://github.com/imagej
+	https://github.com/imagej/imagej-ui-swing/blob/master/src/main/java/net/imagej/ui/swing/widget/SwingColorTableWidget.java
+	https://github.com/imagej/imagej-server
+	https://github.com/RestComm/jss7
+	https://github.com/javadsabbagh/jss7
+	https://telestax.com/open-source/
+	https://github.com/RestComm/jss7/wiki
+	https://github.com/deruelle/RestComm-Core
+	https://telestax.com/rapid-webrtc-application-development-with-restcomm-and-docker/
+	https://telestax.com/partners/
+	https://github.com/RestComm/jss7/wiki/Build-jSS7-from-Source
+	http://mvnrepository.com/artifact/org.mobicents.protocols.ss7.hardware/restcomm-dialogic/3.0.1343
+	http://docs.telestax.com/restcomm-pages/
+	http://docs.telestax.com/restcomm-rcml-client/
+	http://docs.telestax.com/restcomm-api-gateway/
+	http://docs.telestax.com/restcomm-api-sms-messages/
+	http://docs.telestax.com/restcomm-api-incomingphonenumbers/
+	http://docs.telestax.com/restcomm-api-calls/
+	http://docs.telestax.com/restcomm-api-availablephonenumbers/
+	http://docs.telestax.com/restcomm-quick-start-user-guide/
+	http://mvnrepository.com/artifact/org.mobicents.protocols.ss7.tcap/tcap-api
+	http://mvnrepository.com/open-source/code-analyzers
+	https://www.linkedin.com/pulse/%D8%B1%D9%88%D8%B4%D9%87%D8%A7%DB%8C-%D8%AA%D8%B9%DB%8C%DB%8C%D9%86-%D9%88%D8%A7%D8%AD%D8%AF-%D8%B4%D9%85%D8%A7%D8%B1%D8%B4-%DA%A9%D8%A7%D9%84%D8%A7-%D9%88-%D9%82%DB%8C%D9%85%D8%AA-%DA%AF%D8%B0%D8%A7%D8%B1%DB%8C-%D8%AF%D8%B1-%D8%A7%D9%86%D8%A8%D8%A7%D8%B1-%DA%86%DB%8C%D8%B3%D8%AA-parmis-it
+	http://blog.eisele.net/2016/05/developing-reactive-microservices-with.html
+	https://info.lightbend.com/COLL-20XX-Developing-Reactive-Microservices_Landing-Page.html?lst=BL
+	https://dzone.com/articles/the-end-of-javanet-forge-and-project-kenai?utm_content=buffer5d99d&utm_medium=social&utm_source=linkedin.com&utm_campaign=buffer
+	http://raspberry-pi.ir/%D8%A8%D8%B1%D8%AF%D9%87%D8%A7%DB%8C-%D8%B1%D8%B2%D8%A8%D8%B1%DB%8C-%D9%BE%D8%A7%DB%8C/raspberry-pi-3
+	http://www.analyticsvidhya.com/blog/2016/05/ase-studies-10x-faster-using-dynamic-programming/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+AnalyticsVidhya+%28Analytics+Vidhya%29
+	https://dzone.com/articles/java-server-faces-in-real-life-applications?edition=173453&utm_source=Daily%20Digest&utm_medium=email&utm_content=POS1&utm_campaign=dd%202016-05-16&userid=1345215
+	https://dzone.com/articles/the-cost-of-poor-software-quality-infographic
+	http://electronicdesign.com/dev-tools/new-java-me-targets-iot-embedded-devices
+	http://electronicdesign.com/forums/embedded-systems-and-software/can-i-run-java-low-end-microcontrollers
+	http://electronicdesign.com/embedded/java-tool-slims-down-embedded-runtime
+	http://electronicdesign.com/boards/java-program-controls-tuning-direct-digital-synthesizer-chip
+	http://electronicdesign.com/embedded/atego-q-real-time-java
+	https://en.wikipedia.org/wiki/Internet_Protocol
+	http://www.highteck.net/EN/Transport/OSI_Transport_Layer.html
+	http://www.comptechdoc.org/independent/networking/protocol/protlayers.html
+	http://vichargrave.com/network-programming-design-patterns-in-c/
+	https://github.com/javadsabbagh/ds-data-project-template
+	http://mvnrepository.com/artifact/org.apache.deltaspike.core/deltaspike-core-api/1.6.1
+	https://deltaspike.apache.org/documentation/data.html
+	https://github.com/javadsabbagh/jpa-helper-libraries
+	https://jaxenter.com/eclipse-papyrus-ready-for-the-big-stage-126249.html
+	https://jaxenter.com/debate-over-unsafe-continues-119208.html
+	https://jaxenter.com/rest-api-spring-java-8-112289.html
+	https://jaxenter.com/introducing-apache-deltaspike-104543.html
+	https://deltaspike.apache.org/documentation/core.html
+	http://g00glen00b.be/reactjs-gulp-browserify/
+	https://github.com/g00glen00b
+	http://repo.maven.apache.org/maven2/org/wildfly/archetype/wildfly-javaee7-webapp-archetype/
+	http://searchnetworking.techtarget.com/definition/Signaling-System-7
+	http://www.telecomspace.com/ss7-tcap.html
+	https://github.com/AllenFang/react-bootstrap-table/notifications
+	http://opensigtran.org/
+	https://access.redhat.com/documentation/en-US/JBoss_Communications_Platform/5.1/html/SS7_Stack_User_Guide/index.html
+	https://access.redhat.com/products/
+	http://www.openss7.org/sigtran.html
+	https://github.com/openss7/openss7/tree/master/src
+	https://sourceforge.net/projects/cygwinportable/files/
+	http://www.sitepoint.com/getting-started-browserify/
+	http://www.sitepoint.com/introduction-gulp-js/
+	http://www.100percentjs.com/just-like-grunt-gulp-browserify-now/
+	https://www.viget.com/articles/gulp-browserify-starter-faq
+	https://github.com/vigetlabs/gulp-starter
+	
+	http://www.hotscripts.com/blog/top-5-free-opensource-shopping-carts/
+	http://simplecartjs.org/features
+	https://www.quora.com/What-is-the-best-Java-open-source-project-for-a-shopping-cart
+	http://www.cio.com/article/2400389/open-source-tools/10-open-source-shopping-carts-to-run-your-ecommerce-business.html
+	http://www.cio.com/article/2387834/small-business/35-open-source-and-free-tools-to-manage-your-online-store.html
+	http://stackoverflow.com/questions/3992064/what-is-the-best-enterprise-shopping-cart-available-in-java
+	https://github.com/shopizer-ecommerce/shopizer/tree/2.0.3/sm-core
+	http://ofbiz.apache.org/index.html	
+	http://demo-stable-ofbiz.apache.org/ecommerce/control/main
+	http://ofbiz.apache.org/download.html
+	http://www.jadasite.com/jada/web/fe/jadasite/English/content/Download+JadaSite
+	https://sourceforge.net/p/jadasite/code/?source=navbar
+	https://www.konakart.com/documentation/videos/
+	https://www.konakart.com/documentation/javadoc/
+	http://www.konakart.com/javadoc/server/
+	https://www.konakart.com/demos/	
+	https://konakart-demopublic.magnolia-cms.com/#products/Home%20%26%20Garden/d/eyJsaW1pdCI6OSwib2Zmc2V0IjowLCJvcmRlckJ5IjoiT1JERVJfQllfVElNRVNfVklFV0VEX0RFU0NFTkRJTkcifQ==/s/eyJyZXR1cm5DYXRlZ29yeUZhY2V0cyI6dHJ1ZSwicmV0dXJuTWFudWZhY3R1cmVyRmFjZXRzIjp0cnVlLCJmb3JjZVVzZVNvbHIiOnRydWUsImNhdGVnb3J5SWQiOjI0LCJtYW51ZmFjdHVyZXJJZCI6LTEwMH0=
+	https://www.konakart.com/konakart/LogIn.action
+	https://www.konakart.com/downloads/community_edition/
+	http://www.jadasite.com/jada/web/fe/jadasite/English/content/Demo
+	https://sourceforge.net/directory/os:windows/?q=java%20shopping%20cart
+	http://www.broadleafcommerce.org/
+	http://www.broadleafcommerce.org/
+	http://www.broadleafcommerce.com/blog/why-broadleaf-continues-to-choose-spring
+	http://www.learnr.pro/view/book/13929-lwuit-11-for-java-me-developers#15070:28035.764245835137
+	https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=Java+ME+keil
+	
+	http://www.allitebooks.com/oracle-certified-professional-java-se-8-programmer-exam-1z0-809/
+	http://www.allitebooks.com/oca-oracle-certified-associate-java-se-8-programmer-i-study-guide-exam-1z0-808/http://www.allitebooks.com/oca-oracle-certified-associate-java-se-8-programmer-i-study-guide-exam-1z0-808/
+	
+	http://mscs.mum.edu/program-structure/career-counseling.html
+	http://blog.eisele.net/2015/10/my-book-modern-java-ee-design-patterns.html
+	http://blog.eisele.net/2016/05/developing-reactive-microservices-with.html
+	http://blog.eisele.net/2016/05/developing-reactive-microservices-with.html
+	http://blog.eisele.net/2016/01/a-refresher-top-5-java-ee-7-frontend.html
+
+
+	
+
+
+
+
+
