@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)http://elastico.io/blog/jboss-docker-tutorial.html -->
+<html dir="rtl" lang="fa"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<script async="" src="./شیوه استفاده از داکر برای اجرای یک برنامه تحت وب جاوا_files/analytics.js"></script><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73618104-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<link rel="stylesheet" type="text/css" href="./شیوه استفاده از داکر برای اجرای یک برنامه تحت وب جاوا_files/prettify.css">
+
+<style>
+pre {
+    font-family: monospace;
+    direction: ltr;
+}
+</style>
+
+<title>Elastico Blog</title>
+</head>
+
+<body><h1>شیوه استفاده از داکر برای اجرای یک برنامه تحت وب جاوا</h1>
+
+<p>برای اجرای این مثال نیاز دارید ابتدا داکر را نصب کرده باشید. <a href="http://elastico.io/blog/install-docker-windows.html">طریقه نصب داکر روی ویندوز</a> را میتوانید در همین سایت مطالعه کنید. </p>
+
+<p>همچنین تمامی کدها و فایلهای مورد استفاده در این راهنما در گیت هاب در دسترس شماست:
+https://github.com/etcinitd/wildfly-docker-deployment-example</p>
+
+<p>با فرض اینکه برنامه جاوایی خود را کامپایل کرده و به صورت یک فایل war درآورده اید، برای اجرای آن با استفاده از ابزار داکر میتوانید مراحل زیر را طی کنید. برای راحتی شما یک فایل war به صورت نمونه از قبل فراهم شده است. </p>
+
+<ul>
+<li><p>این راهنما از نسخه ۱۰ سرور جی باس (jboss/wildfly) روی داکر استفاده میکند. ابتدا یک فایل با نام <code class="prettyprint prettyprinted"><span class="typ">Dockerfile</span></code> و با این محتویات ایجاد کنید:</p>
+</li>
+</ul>
+<pre><code class="prettyprint prettyprinted"><span class="pln">FROM jboss</span><span class="pun">/</span><span class="pln">wildfly</span><span class="pun">:</span><span class="lit">10.0</span><span class="pun">.</span><span class="lit">0.Final</span><span class="pln">
+ADD node</span><span class="pun">-</span><span class="pln">info</span><span class="pun">.</span><span class="pln">war </span><span class="pun">/</span><span class="pln">opt</span><span class="pun">/</span><span class="pln">jboss</span><span class="pun">/</span><span class="pln">wildfly</span><span class="pun">/</span><span class="pln">standalone</span><span class="pun">/</span><span class="pln">deployments</span><span class="pun">/</span></code></pre>
+
+<p>این فایل مخصوص داکر است و برای ساخت یک تصویر (image) داکر که برنامه جاوایی مورد نظر شما را در خود دارد استفاده میشود.</p>
+
+<p>خط اول این فایل تصویر پایه (base image) را  مشخص میکند که در این مثال سرور jboss/wildfly از کتابخانه داکر است. توضیحات بیشتر راجع به این تصویر خاص و نسخه های متفاوت آن را میتوانید در <a href="https://hub.docker.com/r/jboss/wildfly">صفحه سایت داکر هاب</a> مشاهده کنید. </p>
+
+<p>خط دوم فایل war را که حاوی برنامه جاواست و از قبل ساخته شده، به این تصویر اضافه میکند و در آدرس مورد نظر برای سرور جی باس در داخل کانتینر قرار میدهد. بجای <code class="prettyprint prettyprinted"><span class="pln">node</span><span class="pun">-</span><span class="pln">info</span><span class="pun">.</span><span class="pln">war</span></code> میتوانید نام فایل war برنامه خودتان را بنویسید.</p>
+
+<p><em>نکته جانبی:</em> به طور کلی در داکر هر تصویر (image) میتواند به عنوان پایه ای برای تصاویر جدید بکار رود و به این ترتیب لایه های متعددی از تصاویر یک تصویر نهایی را تشکیل میدهند. این ویژگی یکی از قابلیتهای مهم و اصلی داکر برای تولید و پخش ساده و سریع تصاویر است چون برای تولید یا انتقال یک تصویر تنها نیاز به ایجاد یا ارسال تفاوتهای بین دو تصویر است که به حجمی بسیار کمتر از تک تک تصاویر نیاز دارد.</p>
+
+<ul>
+<li><p>فایل war برنامه خود را، که در مثال ما <code class="prettyprint prettyprinted"><span class="pln">node</span><span class="pun">-</span><span class="pln">info</span><span class="pun">.</span><span class="pln">war</span></code> نام دارد، در همان پوشه ای که <code class="prettyprint prettyprinted"><span class="typ">Dockerfile</span></code> قرار دارد کپی کنید.</p></li>
+<li><p>در همان پوشه، تصویر (image) داکر را با اجرای دستور زیر بسازید. دقت کنید که در این صورت نام تصویر تولید شده wildfly-app خواهد بود: </p>
+</li>
+
+<pre><code class="prettyprint prettyprinted"><span class="pln">docker build </span><span class="pun">--</span><span class="pln">tag</span><span class="pun">=</span><span class="pln">wildfly</span><span class="pun">-</span><span class="pln">app </span><span class="pun">.</span></code></pre>
+<li><p>در نهایت، کانتینر را با استفاده از دستور زیر اجرا کنید. این کار برنامه شما را در زمان شروع به کار کانتینر به صورت خودکار روی پرت (port) شماره 8080 اجرا میکند: <code class="prettyprint prettyprinted"><span class="pln">docker run </span><span class="pun">-</span><span class="pln">it </span><span class="pun">-</span><span class="pln">p </span><span class="lit">8080</span><span class="pun">:</span><span class="lit">8080</span><span class="pln"> wildfly</span><span class="pun">-</span><span class="pln">app</span></code></p></li>
+<li><p>برای تست برنامه، اگر از ابزار docker-machine استفاده میکنید، آدرس IP ماشین مجازی داکر خودتان را به این طریق پیدا کنید:</p>
+</li>
+
+<pre><code class="prettyprint prettyprinted"><span class="pln">$ docker</span><span class="pun">-</span><span class="pln">machine ls
+NAME      ACTIVE   DRIVER       STATE     URL
+</span><span class="kwd">default</span><span class="pln">            virtualbox   </span><span class="typ">Running</span><span class="pln">   tcp</span><span class="pun">:</span><span class="com">//&lt;docker-machine-ip&gt;:2376</span></code></pre>
+
+<li><p>سپس با قرار دادن آدرس IP مرحله قبل در مرورگر، یا ابزاری مانند curl به صورت زیر، میتوانید صفحه وب برنامه جاوایی اجرا شده را مشاهده کنید:</p>
+</li>
+</ul>
+
+<pre><code class="prettyprint prettyprinted"><span class="pln">$ curl http</span><span class="pun">:</span><span class="com">//&lt;docker-machine-ip&gt;:8080/node-info/</span><span class="pln">
+</span><span class="typ">Hostname</span><span class="pun">:</span><span class="pln"> </span><span class="lit">4e3daa7ea20f</span><span class="pln">
+</span><span class="typ">Java</span><span class="pln"> </span><span class="typ">Runtime</span><span class="pun">:</span><span class="pln"> </span><span class="typ">OpenJDK</span><span class="pln"> </span><span class="typ">Runtime</span><span class="pln"> </span><span class="typ">Environment</span><span class="pln"> </span><span class="lit">1.8</span><span class="pun">.</span><span class="lit">0_71</span><span class="pun">-</span><span class="pln">b15
+OS</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Linux</span><span class="pln"> amd64 </span><span class="lit">4.0</span><span class="pun">.</span><span class="lit">9</span><span class="pun">-</span><span class="pln">boot2docker</span></code></pre>
+
+<p>اگر به هنگام اجرای کانتینرها با مشکلاتی برای دانلود image ها از Docker Hub مواجه شدید، میتوانید با تنظیم یک mirror به صورتی که در <a href="https://groups.google.com/forum/#!topic/software-taak/xRmFWrozRoo">این گروه</a> گفته شده، دوباره این کار را امتحان کنید.</p>
+
+<p>اگر فکر میکنید برای کار با داکر نیاز به کمک بیشتری دارید و یا علاقه مند هستید که در آینده به یک سرور مجازی برای یادگیری داکر دسترسی داشته باشید میتوانید <a href="https://docs.google.com/forms/d/1fIYtXM6UaV5pFRBAkNKVNHzBnUg157Sedxds5xYPWDI/viewform?usp=send_form">این فرم کوتاه</a> را پر کنید تا به یک گروه Slack به نام <strong>elastico-users</strong> که برای همین کار ایجاد شده است دعوت شوید. در آنجا میتوانید از اعضای با تجربه تر گروه هم کمک بگیرید.</p>
+
+<p style="color:grey;font-size:small;text-align:center;">کلیه حقوق محفوظ است. بازنشر این مطلب با ذکر آدرس این سایت مجاز است.</p>
+
+
+
+</body></html>

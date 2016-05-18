@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)http://elastico.io/blog/how-to-write-dockerfile.html -->
+<html dir="rtl" lang="fa"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<script async="" src="./روش نوشتن یک Dockerfile_files/analytics.js"></script><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73618104-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<link rel="stylesheet" type="text/css" href="./روش نوشتن یک Dockerfile_files/prettify.css">
+
+<style>
+pre {
+    font-family: monospace;
+    direction: ltr;
+}
+</style>
+
+<title>روش نوشتن یک Dockerfile</title>
+</head>
+
+<body>
+<h1>روش نوشتن یک Dockerfile</h1>
+
+<p>یکی از بهترین روشهای تولید یک تصویر داکر (docker image)، نوشتن یک Dockerfile و سپس استفاده از دستور <code class="prettyprint prettyprinted"><span class="pln">docker build</span></code> است. این روش به دلیل سادگی و سازگاری با متدولوژی زیرساخت به صورت کد (Infrastructure as Code) به متداولترین راه برای تولید تصاویر داکر تبدیل شده است.</p>
+
+<p><em>جهت اجرای دستورات گفته شده در این مقاله نیاز دارید قبلا داکر را نصب کرده باشید. روش نصب داکر روی <a href="http://elastico.io/blog/install-docker-windows.html">ویندوز</a> یا <a href="http://elastico.io/blog/install-docker-centos7.html">لینوکس CentOS</a> را میتوانید در همین سایت مطالعه کنید. همچنین برای یادگیری بهتر این مطلب ممکن است آشنایی با <a href="http://elastico.io/blog/docker-basic-concepts.html">مفاهیم پایه ای داکر</a> به شما کمک کند.</em></p>
+
+<h2>ساده ترین Dockerfile</h2>
+
+<p>ساده ترین Dockerfile میتواند تنها شامل یک خط باشد که مشخص میکند کدام تصویر قرار است به عنوان تصویر پایه برای تولید یک تصویر جدید بکار گرفته شود. به عنوان مثال کافیست در یک پوشه فایلی با این محتویات و با نام <code class="prettyprint prettyprinted"><span class="typ">Dockerfile</span></code> ایجاد کنید:</p>
+
+<pre><code class="prettyprint prettyprinted"><span class="pln">    FROM debian</span><span class="pun">:</span><span class="pln">wheezy</span></code></pre>
+
+<p>سپس میتوانید با اجرای دستور <code class="prettyprint prettyprinted"><span class="pln">docker build </span><span class="pun">-</span><span class="pln">t </span><span class="kwd">my</span><span class="pun">-</span><span class="pln">first</span><span class="pun">-</span><span class="pln">image $PWD</span></code> در همان پوشه، اولین تصویر داکر خود را بسازید. در این حالت تصویر جدید کاملا مشابه تصویر پایه خواهد بود، که در این مثال نسخه Wheezy از سیستم عامل Debian است.</p>
+
+<p>در نهایت با اجرای دستور <code class="prettyprint prettyprinted"><span class="pln">docker images</span></code> میتوانید تمامی تصاویر موجود روی ماشین داکر خودتان را لیست کنید که شامل تصویر جدید نیز میشود:</p>
+
+<pre><code class="prettyprint prettyprinted"><span class="pln">    $ docker images
+    REPOSITORY         TAG       IMAGE ID       CREATED        SIZE
+    debian             wheezy    </span><span class="lit">2e9c7e5da19c</span><span class="pln">   </span><span class="lit">12</span><span class="pln"> days ago    </span><span class="lit">84.92</span><span class="pln"> MB
+    </span><span class="kwd">my</span><span class="pun">-</span><span class="pln">first</span><span class="pun">-</span><span class="pln">image     latest    </span><span class="lit">2e9c7e5da19c</span><span class="pln">   </span><span class="lit">12</span><span class="pln"> days ago    </span><span class="lit">84.92</span><span class="pln"> MB</span></code></pre>
+
+<p>همانطور که مشاهده میکنید شناسه های (ID) هر دو این تصاویر دقیقا یکسان هستند و حتی با اینکه تصویر جدید لحظاتی قبل تولید شده است، زمان ایجاد آن چند روز قبل و همزمان با تصویر پایه نشان داده میشود. این بدین دلیل است که دستور <code class="prettyprint prettyprinted"><span class="pln">docker build</span><span class="pun">‍</span></code> تشخیص میدهد که تصویر جدید هیچ تغییراتی نسبت به تصویر پایه ندارد و بنابراین نیازی به اختصاص فضا و شناسه جدید نیست. در واقع با این کار تنها یک نام جدید برای همان تصویر قبلی تولید شده است که این کار را میتوان با کمک دستور <code class="prettyprint prettyprinted"><span class="pln">docker tag</span></code> نیز به سادگی و بدون نیاز به Dockerfile انجام داد.</p>
+
+<h2>اضافه کردن فایل به تصویر</h2>
+
+<p>اگر فایلی مثلا به نام <code class="prettyprint prettyprinted"><span class="pln">test</span><span class="pun">.</span><span class="pln">sh</span></code> در همان پوشه داشته باشید میتوانید با اضافه کردن یک خط دیگر در Dockerfile این فایل را به مجموعه فایلهای موجود در تصویر خود اضافه کنید:</p>
+
+<pre><code class="prettyprint prettyprinted"><span class="pln">    FROM debian</span><span class="pun">:</span><span class="pln">wheezy
+    COPY test</span><span class="pun">.</span><span class="pln">sh </span><span class="pun">/</span><span class="pln">test</span><span class="pun">.</span><span class="pln">sh</span></code></pre>
+
+<p>در این حالت خروجی دستور <code class="prettyprint prettyprinted"><span class="pln">docker build</span></code> به صورت زیر خواهد بود:</p>
+
+<pre><code class="prettyprint prettyprinted"><span class="pln">    $ docker build </span><span class="pun">-</span><span class="pln">t </span><span class="kwd">my</span><span class="pun">-</span><span class="pln">second</span><span class="pun">-</span><span class="pln">image </span><span class="pun">.</span><span class="pln">
+    </span><span class="typ">Sending</span><span class="pln"> build context to </span><span class="typ">Docker</span><span class="pln"> daemon  </span><span class="lit">2.56</span><span class="pln"> kB
+    </span><span class="typ">Step</span><span class="pln"> </span><span class="lit">1</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> FROM debian</span><span class="pun">:</span><span class="pln">wheezy
+    </span><span class="pun">---&gt;</span><span class="pln"> </span><span class="lit">2e9c7e5da19c</span><span class="pln">
+    </span><span class="typ">Step</span><span class="pln"> </span><span class="lit">2</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> COPY test</span><span class="pun">.</span><span class="pln">sh </span><span class="pun">/</span><span class="pln">test</span><span class="pun">.</span><span class="pln">sh
+    </span><span class="pun">---&gt;</span><span class="pln"> </span><span class="lit">0ff656c325b7</span><span class="pln">
+    </span><span class="typ">Removing</span><span class="pln"> intermediate container </span><span class="lit">32821b2cd6d4</span><span class="pln">
+    </span><span class="typ">Successfully</span><span class="pln"> built </span><span class="lit">0ff656c325b7</span></code></pre>
+
+<p>نکته قابل توجه در این خروجی وجود دو مرحله در ساخت این تصویر جدید است. حالا اگر لیست تصاویر موجود را مجددا بررسی کنید متوجه خواهید شد که تصویر جدید، به نام my-second-image، شناسه ای متفاوت از تصویر پایه دارد و در زمان جدیدتری نیز ساخته شده است:</p>
+
+<pre><code class="prettyprint prettyprinted"><span class="pln">   $ docker images
+   REPOSITORY         TAG       IMAGE ID       CREATED        SIZE
+   </span><span class="kwd">my</span><span class="pun">-</span><span class="pln">second</span><span class="pun">-</span><span class="pln">image    latest    </span><span class="lit">0ff656c325b7</span><span class="pln">   </span><span class="lit">7</span><span class="pln"> minutes ago  </span><span class="lit">84.92</span><span class="pln"> MB
+   debian             wheezy    </span><span class="lit">2e9c7e5da19c</span><span class="pln">   </span><span class="lit">12</span><span class="pln"> days ago    </span><span class="lit">84.92</span><span class="pln"> MB
+   </span><span class="kwd">my</span><span class="pun">-</span><span class="pln">first</span><span class="pun">-</span><span class="pln">image     latest    </span><span class="lit">2e9c7e5da19c</span><span class="pln">   </span><span class="lit">12</span><span class="pln"> days ago    </span><span class="lit">84.92</span><span class="pln"> MB</span></code></pre>
+
+<p>مشابه همین روش را میتوانید برای اضافه کردن یک پوشه به تصویر بکار ببرید. دقت کنید که حجم تصویر جدید بسته به تعداد و اندازه فایلهای اضافه شده بزرگتر از تصویر پایه خواهد شد.</p>
+
+<p><strong>نکته:</strong> اگر بدون هیچ تغییری در هیچ یک از فایلها، دوباره اقدام به ساخت همین تصویر کنید متوجه خواهید شد که دفعه دوم فرآیند ساخت بسیار سریعتر و تقریبا به صورت آنی تمام میشود. علت این امر آن است که داکر برای هر مرحله یک تصویر میانی میسازد و تمامی این تصاویر میانی را به صورت موقت نگهداری میکند تا فرآیند ساخت را تسریع کند.</p>
+
+<p>برای اینکه محتویات تصویر جدید را مشاهده کنید و از وجود فایلهای خود مطمئن شوید میتوانید اقدام به اجرای یک پوسته (shell) در یک کانتینر از این تصویر کنید:</p>
+
+<pre><code class="prettyprint prettyprinted"><span class="pln">   $ docker run </span><span class="pun">--</span><span class="pln">rm </span><span class="pun">-</span><span class="pln">ti </span><span class="kwd">my</span><span class="pun">-</span><span class="pln">second</span><span class="pun">-</span><span class="pln">image </span><span class="pun">/</span><span class="pln">bin</span><span class="pun">/</span><span class="pln">sh
+   </span><span class="com"># ls -l /test.sh</span><span class="pln">
+   </span><span class="pun">-</span><span class="pln">rw</span><span class="pun">-</span><span class="pln">r</span><span class="pun">--</span><span class="pln">r</span><span class="pun">--</span><span class="pln"> </span><span class="lit">1</span><span class="pln"> root root </span><span class="lit">0</span><span class="pln"> </span><span class="typ">May</span><span class="pln"> </span><span class="lit">16</span><span class="pln"> </span><span class="lit">13</span><span class="pun">:</span><span class="lit">32</span><span class="pln"> </span><span class="pun">/</span><span class="pln">test</span><span class="pun">.</span><span class="pln">sh</span></code></pre>
+
+<p>در صورت نیاز برای آشنایی بیشتر با فرامین داکر میتوانید <a href="http://elastico.io/blog/useful-docker-commands.html">دستورات پرکاربرد داکر</a> را مطالعه کنید.</p>
+
+<p>همچنین لازم به ذکر است که دستور <code class="prettyprint prettyprinted"><span class="pln">COPY</span></code> مشابه قدیمی تری به نام <code class="prettyprint prettyprinted"><span class="pln">ADD</span></code> دارد که در حال حاضر کمتر استفاده میشود. این دو دستور تفاوتهایی با یکدیگر دارند، مانند اینکه در دستور <code class="prettyprint prettyprinted"><span class="pln">ADD</span></code> میتوان یک آدرس وب را بجای مبدا برای اضافه کردن یک فایل به تصویر استفاده کرد.</p>
+
+<h2>نصب برنامه ها روی تصویر</h2>
+
+<p>با استفاده از دستور <code class="prettyprint prettyprinted"><span class="pln">RUN</span></code> در یک Dockerfile میتوانید برنامه هایی را که در حال حاضر روی تصویر شما نصب نیستند به آن اضافه کنید. این دستور به طور کلی برای اجرای هر برنامه ای در <strong>زمان ساخت تصویر</strong> کاربرد دارد. به عنوان مثال Dockerfile زیر برنامه unzip را روی یک تصویر پایه نصب میکند:</p>
+
+<pre><code class="prettyprint prettyprinted"><span class="pln">    FROM debian</span><span class="pun">:</span><span class="pln">wheezy
+    RUN apt</span><span class="pun">-</span><span class="kwd">get</span><span class="pln"> update
+    RUN apt</span><span class="pun">-</span><span class="kwd">get</span><span class="pln"> install </span><span class="pun">-</span><span class="pln">y </span><span class="pun">--</span><span class="kwd">no</span><span class="pun">-</span><span class="pln">install</span><span class="pun">-</span><span class="pln">recommends unzip
+    RUN rm </span><span class="pun">-</span><span class="pln">rf </span><span class="pun">/</span><span class="kwd">var</span><span class="pun">/</span><span class="pln">lib</span><span class="pun">/</span><span class="pln">apt</span><span class="pun">/</span><span class="pln">lists</span><span class="com">/*</span></code></pre>
+
+<p><strong>نکته:</strong> هدف از خط آخر که دستور <code class="prettyprint prettyprinted"><span class="pln">rm</span></code> را اجرا میکند حذف فایلهای غیرضروری از تصویر ساخته شده پس از نصب برنامه هاست تا حجم آن بیش از حد افزایش پیدا نکند. اما از آنجایی که هر دستور <code class="prettyprint prettyprinted"><span class="pln">RUN</span></code> در Dockerfile یک لایه جدید به تصویر اضافه میکند، بدون اینکه هیچ تغییری در لایه های قبلی بدهد، این هدف با این روش محقق نمیشود.</p>
+
+<p>اگر این تصویر را با اجرای دستور <code class="prettyprint prettyprinted"><span class="pln">docker build </span><span class="pun">-</span><span class="pln">t </span><span class="kwd">my</span><span class="pun">-</span><span class="pln">unzip</span><span class="pun">-</span><span class="pln">image $PWD</span></code> بسازید متوجه خواهید شد که ۴ مرحله طی میشود که منجر به ساخت ۴ لایه جدید خواهد شد. این روش در زمان توسعه یک Dockerfile بسیار مفید است زیرا هر بار که تغییری در فایلی بدهید و بخواهید تصویر خود را مجددا بسازید تنها دستوراتی که تغییر کرده اند اجرا خواهند شد و به این ترتیب فرآیند توسعه و عیب یابی با سرعت بیشتری پیش خواهد رفت. اما پس از اینکه از درستی فایل خود مطمئن شدید بهتر است برای بهینه کردن این تصویر آن را به صورت زیر بازنویسی کنید تا تنها یک دستور <code class="prettyprint prettyprinted"><span class="pln">RUN</span></code> در آن بکار گرفته شود:</p>
+
+<pre><code class="prettyprint prettyprinted"><span class="pln">   FROM debian</span><span class="pun">:</span><span class="pln">wheezy
+   RUN apt</span><span class="pun">-</span><span class="kwd">get</span><span class="pln"> update </span><span class="pun">&amp;&amp;</span><span class="pln"> \
+       apt</span><span class="pun">-</span><span class="kwd">get</span><span class="pln"> install </span><span class="pun">-</span><span class="pln">y </span><span class="pun">--</span><span class="kwd">no</span><span class="pun">-</span><span class="pln">install</span><span class="pun">-</span><span class="pln">recommends unzip </span><span class="pun">&amp;&amp;</span><span class="pln"> \
+       rm </span><span class="pun">-</span><span class="pln">rf </span><span class="pun">/</span><span class="kwd">var</span><span class="pun">/</span><span class="pln">lib</span><span class="pun">/</span><span class="pln">apt</span><span class="pun">/</span><span class="pln">lists</span><span class="com">/*</span></code></pre>
+
+<p>این روش تنها یک لایه به تصویر پایه اضافه میکند که منجر به ساخت تصویری کوچکتر با تعداد لایه های کمتر خواهد شد که برای انتشار و استفاده کاربران مناسبتر است.</p>
+
+<h2>مشخص کردن یک برنامه پیش فرض برای کانتینر</h2>
+
+<p>در مدل توصیه شده داکر، هر کانتینر بناست فقط پردازه هایی از یک نوع برنامه اجرایی را شامل شود. با کمک دستور <code class="prettyprint prettyprinted"><span class="pln">CMD</span></code> که معمولا در انتهای Dockerfile آورده میشود میتوان یک دستور اجرایی را به صورت پیش فرض برای یک تصویر مشخص کرد که این دستور در نهایت در <strong>زمان اجرای یک کانتینر</strong> از روی تصویر ساخته شده استفاده خواهد شد. به عنوان مثال Dockerfile زیر دستور <code class="prettyprint prettyprinted"><span class="pln">unzip</span></code> را برای اجرا روی تصویر مشخص میکند:</p>
+
+<pre><code class="prettyprint prettyprinted"><span class="pln">   FROM debian</span><span class="pun">:</span><span class="pln">wheezy
+   RUN apt</span><span class="pun">-</span><span class="kwd">get</span><span class="pln"> update </span><span class="pun">&amp;&amp;</span><span class="pln"> \
+       apt</span><span class="pun">-</span><span class="kwd">get</span><span class="pln"> install </span><span class="pun">-</span><span class="pln">y </span><span class="pun">--</span><span class="kwd">no</span><span class="pun">-</span><span class="pln">install</span><span class="pun">-</span><span class="pln">recommends unzip </span><span class="pun">&amp;&amp;</span><span class="pln"> \
+       rm </span><span class="pun">-</span><span class="pln">rf </span><span class="pun">/</span><span class="kwd">var</span><span class="pun">/</span><span class="pln">lib</span><span class="pun">/</span><span class="pln">apt</span><span class="pun">/</span><span class="pln">lists</span><span class="com">/*
+   CMD ["unzip"]</span></code></pre>
+
+<p>پس از ساختن یک تصویر از روی این فایل با دستور <code class="prettyprint prettyprinted"><span class="pln">docker build </span><span class="pun">-</span><span class="pln">t </span><span class="kwd">my</span><span class="pun">-</span><span class="pln">unzip</span><span class="pun">-</span><span class="pln">image $PWD</span></code> و سپس اجرای یک کانتینر روی آن، خروجی به صورت زیر خواهد بود که نشان میدهد برنامه <code class="prettyprint prettyprinted"><span class="pln">unzip</span></code> با موفقیت اجرا شده است:</p>
+
+<pre><code class="prettyprint prettyprinted"><span class="pln">   $ docker run </span><span class="pun">--</span><span class="pln">rm </span><span class="pun">-</span><span class="pln">ti </span><span class="kwd">my</span><span class="pun">-</span><span class="pln">unzip</span><span class="pun">-</span><span class="pln">image
+   </span><span class="typ">UnZip</span><span class="pln"> </span><span class="lit">6.00</span><span class="pln"> of </span><span class="lit">20</span><span class="pln"> </span><span class="typ">April</span><span class="pln"> </span><span class="lit">2009</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">by</span><span class="pln"> </span><span class="typ">Debian</span><span class="pun">.</span><span class="pln"> </span><span class="typ">Original</span><span class="pln"> </span><span class="kwd">by</span><span class="pln"> </span><span class="typ">Info</span><span class="pun">-</span><span class="pln">ZIP</span><span class="pun">.</span><span class="pln">
+   </span><span class="typ">Usage</span><span class="pun">:</span><span class="pln"> unzip </span><span class="pun">[-</span><span class="pln">Z</span><span class="pun">]</span><span class="pln"> </span><span class="pun">[-</span><span class="pln">opts</span><span class="pun">[</span><span class="pln">modifiers</span><span class="pun">]]</span><span class="pln"> file</span><span class="pun">[.</span><span class="pln">zip</span><span class="pun">]</span><span class="pln"> </span><span class="pun">[</span><span class="pln">list</span><span class="pun">]</span><span class="pln"> </span><span class="pun">[-</span><span class="pln">x xlist</span><span class="pun">]</span><span class="pln"> </span><span class="pun">[-</span><span class="pln">d exdir</span><span class="pun">]</span><span class="pln">
+     </span><span class="typ">Default</span><span class="pln"> action </span><span class="kwd">is</span><span class="pln"> to extract files </span><span class="kwd">in</span><span class="pln"> list</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">except</span><span class="pln"> those </span><span class="kwd">in</span><span class="pln"> xlist</span><span class="pun">,</span><span class="pln"> to exdir</span><span class="pun">;</span><span class="pln">
+     file</span><span class="pun">[.</span><span class="pln">zip</span><span class="pun">]</span><span class="pln"> may be a wildcard</span><span class="pun">.</span><span class="pln">  </span><span class="pun">-</span><span class="pln">Z </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="typ">ZipInfo</span><span class="pln"> mode </span><span class="pun">(</span><span class="str">"unzip -Z"</span><span class="pln"> </span><span class="kwd">for</span><span class="pln"> usage</span><span class="pun">).</span><span class="pln">
+   </span><span class="pun">...</span></code></pre>
+
+<p>دقت کنید که شما همچنان میتوانید در صورت نیاز برنامه های دیگری را به سادگی روی این تصویر اجرا کنید. برای این کار کافیست در انتهای دستور <code class="prettyprint prettyprinted"><span class="pln">docker run</span><span class="pun">‍</span></code> نام برنامه اجرایی مورد نظرتان را ذکر کنید تا به جای دستور پیش فرض اجرا شود.</p>
+
+<p><strong>نکته:</strong> دستور مشابه دیگری به نام <code class="prettyprint prettyprinted"><span class="pln">ENTRYPOINT</span></code> نیز برای مشخص کردن برنامه پیش فرض وجود دارد که تنها برای کاربردهای پیچیده تر توصیه میشود.</p>
+
+<p>در انتها اگر تمایل دارید با یک کاربرد واقعی از ‌Dockerfile آشنا شوید میتوانید <a href="http://elastico.io/blog/jboss-docker-tutorial.html">شیوه استفاده از داکر برای اجرای یک برنامه تحت وب جاوا</a> را مطالعه کنید.</p>
+
+<p style="color:grey;font-size:small;text-align:center;">کلیه حقوق محفوظ است. بازنشر این مطلب با ذکر آدرس این سایت مجاز است.</p>
+
+
+</body></html>

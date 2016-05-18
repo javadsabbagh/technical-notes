@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)http://elastico.io/blog/install-docker-windows.html -->
+<html dir="rtl" lang="fa"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<script async="" src="./طریقه نصب داکر روی ویندوز_files/analytics.js"></script><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73618104-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<link rel="stylesheet" type="text/css" href="./طریقه نصب داکر روی ویندوز_files/prettify.css">
+
+<style>
+pre {
+    font-family: monospace;
+    direction: ltr;
+}
+</style>
+
+<title>Elastico Blog</title>
+</head>
+
+<body><h1>طریقه نصب داکر روی ویندوز</h1>
+
+<p>کاربران ویندوز میتوانند از Docker Toolbox برای نصب داکر استفاده کنند. Docker Toolbox ابزارهای زیر را در اختیار شما قرار میدهد:</p>
+
+<ul>
+<li>ابزار خط فرمان داکر (Docker CLI) برای تعامل با موتور داکر (Docker Engine) جهت ایجاد و تعامل با کانتینرها</li>
+<li>ابزار ماشین داکر (Docker Machine) برای ایجاد ماشینهای مجازی که امکان اجرای کانتینرها را روی ویندوز دارند</li>
+<li>ابزار داکر کامپوز (Docker Compose) برای اجرای دستورات docker-compose</li>
+<li>محیط واسط گرافیکی Kitematic</li>
+<li>پوسته شروع سریع داکر (Docker QuickStart) برای ایجاد سریع یک خط فرمان آماده برای اجرای دستورات داکر</li>
+<li>نرم افزار متن باز Oracle VM VirtualBox</li>
+</ul>
+
+<p>به خاطر اینکه موتور داکر (Docker Engine)‌ از ویژگیهای خاص هسته لینوکس استفاده میکند شما نمیتوانید آن را مستقیم روی ویندوز اجرا کنید. به همین دلیل نیاز است که ابتدا با استفاده از دستور ماشین داکر (<code class="prettyprint prettyprinted"><span class="pln">docker</span><span class="pun">-</span><span class="pln">machine</span></code>) یک ماشین مجازی کوچک لینوکس درست کنید و سپس از طریق آن داکر را اجرا کنید.</p>
+
+<h2>قدم ۱: نسخه ویندوز خود را چک کنید</h2>
+
+<p>برای اینکه بتوانید داکر را اجرا کنید، ماشین شما باید نسخه ۶۴ بیتی ویندوز ۷ یا بالاتر را داشته باشد. همچنین باید مطمئن شوید که امکان virtualization برای سیستم شما فعال شده است.</p>
+
+<p>برای اطمینان از داشتن این پیش نیازها، میتوانید کارهای زیر را انجام دهید:</p>
+
+<ol>
+<li>به Control Panel در قسمت System and Security و بعد System بروید و نسخه ویندوز خود را چک کنید.</li>
+<li>ابزار مایکروسافت برای تشخیص امکان virtualization را از <a href="https://www.microsoft.com/en-au/download/details.aspx?id=592">اینجا</a> دانلود و نصب کنید. همچنین در ویندوز ۸ میتوانید این تنظیم را از طریق Start &gt; Task Manager &gt; Performance tab و در قسمت CPU مشاهده کنید.</li>
+<li>با استفاده از راهنمایی <a href="https://support.microsoft.com/en-us/kb/827218">این مقاله</a> میتوانید مطمئن شوید که نسخه ویندوز شما ۶۴ بیتی است.</li>
+</ol>
+
+<h2>قدم ۲: جعبه ابزار داکر (Docker Toolbox) را نصب کنید</h2>
+
+<p>اگر در حال حاضر نسخه ای از نرم افزار VirtualBox را نصب شده دارید نیازی نیست آن را دوباره نصب کنید، فقط لازم است هنگام نصب جعبه ابزار داکر آن را ببندید.</p>
+
+<ol>
+<li>به صفحه <a href="https://www.docker.com/toolbox">Docker Toolbox</a> بروید و آن را دانلود کنید.</li>
+<li>برنامه Installer را اجرا کنید. اگر ویندوز از شما خواست که اجازه تغییر سیستم را به این برنامه بدهید، گزینه Yes را انتخاب کنید.</li>
+<li>برای حالت پیش فرض، در مراحل بعدی گزینه Next را انتخاب کنید و در نهایت گزینه Install.</li>
+<li>پس از نصب موفقیت آمیز، صفحه ای ظاهر میشود که در آن دکمه Finish وجود دارد و میتوانید آن را بفشارید.</li>
+</ol>
+
+<h2>قدم ۳: نرم افزارهای نصب شده را بررسی کنید</h2>
+
+<p>تمامی ابزارهای نصب شده، در پوشه Applications قرار میگیرند. در این مرحله آنها را یک به یک تست میکنیم:</p>
+
+<ol>
+<li>روی Desktop و یا در پوشه Applications ابزار Docker Toolbox را پیدا کنید و آن را اجرا کنید.</li>
+<li>این ابزار برای شما یک خط فرمان آماده برای اجرای دستورات داکر باز میکند. اگر سیستم از شما خواست که به VirtualBox اجازه تغییرات در سیستم را بدهید گزینه Yes را انتخاب کنید. این خط فرمان یک محیط <code class="prettyprint prettyprinted"><span class="pln">bash</span></code> که خاص لینوکس است را در ویندوز برای شما فراهم میکند چون مورد نیاز داکر است.</li>
+<li>دستور <code class="prettyprint prettyprinted"><span class="pln">docker run hello</span><span class="pun">-</span><span class="pln">world</span></code> را تایپ و اجرا کنید.</li>
+</ol>
+
+<p>اجرای کامل این دستور مدتی طول میکشد و اگر همه چیز به خوبی پیش برود خروجی زیر را مشاهده میکنید:</p>
+
+<pre><code class="prettyprint prettyprinted"><span class="pln">$ docker run hello</span><span class="pun">-</span><span class="pln">world
+</span><span class="typ">Unable</span><span class="pln"> to find image </span><span class="str">'hello-world:latest'</span><span class="pln"> locally
+</span><span class="typ">Pulling</span><span class="pln"> repository hello</span><span class="pun">-</span><span class="pln">world
+</span><span class="lit">91c95931e552</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Download</span><span class="pln"> complete
+a8219747be10</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Download</span><span class="pln"> complete
+</span><span class="typ">Status</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Downloaded</span><span class="pln"> newer image </span><span class="kwd">for</span><span class="pln"> hello</span><span class="pun">-</span><span class="pln">world</span><span class="pun">:</span><span class="pln">latest
+</span><span class="typ">Hello</span><span class="pln"> </span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Docker</span><span class="pun">.</span><span class="pln">
+</span><span class="typ">This</span><span class="pln"> message shows that your installation appears to be working correctly</span><span class="pun">.</span><span class="pln">
+
+</span><span class="typ">To</span><span class="pln"> generate </span><span class="kwd">this</span><span class="pln"> message</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Docker</span><span class="pln"> took the following steps</span><span class="pun">:</span><span class="pln">
+ </span><span class="lit">1.</span><span class="pln"> </span><span class="typ">The</span><span class="pln"> </span><span class="typ">Docker</span><span class="pln"> </span><span class="typ">Engine</span><span class="pln"> CLI client contacted the </span><span class="typ">Docker</span><span class="pln"> </span><span class="typ">Engine</span><span class="pln"> daemon</span><span class="pun">.</span><span class="pln">
+ </span><span class="lit">2.</span><span class="pln"> </span><span class="typ">The</span><span class="pln"> </span><span class="typ">Docker</span><span class="pln"> </span><span class="typ">Engine</span><span class="pln"> daemon pulled the </span><span class="str">"hello-world"</span><span class="pln"> image </span><span class="kwd">from</span><span class="pln"> the </span><span class="typ">Docker</span><span class="pln"> </span><span class="typ">Hub</span><span class="pun">.</span><span class="pln">
+    </span><span class="pun">(</span><span class="typ">Assuming</span><span class="pln"> it was </span><span class="kwd">not</span><span class="pln"> already locally available</span><span class="pun">.)</span><span class="pln">
+ </span><span class="lit">3.</span><span class="pln"> </span><span class="typ">The</span><span class="pln"> </span><span class="typ">Docker</span><span class="pln"> </span><span class="typ">Engine</span><span class="pln"> daemon created a </span><span class="kwd">new</span><span class="pln"> container </span><span class="kwd">from</span><span class="pln"> that image which runs the executable that produces the output you are currently reading</span><span class="pun">.</span><span class="pln">
+ </span><span class="lit">4.</span><span class="pln"> </span><span class="typ">The</span><span class="pln"> </span><span class="typ">Docker</span><span class="pln"> </span><span class="typ">Engine</span><span class="pln"> daemon streamed that output to the </span><span class="typ">Docker</span><span class="pln"> </span><span class="typ">Engine</span><span class="pln"> CLI client</span><span class="pun">,</span><span class="pln"> which sent it to your terminal</span><span class="pun">.</span><span class="pln">
+
+</span><span class="typ">To</span><span class="pln"> </span><span class="kwd">try</span><span class="pln"> something more ambitious</span><span class="pun">,</span><span class="pln"> you can run an </span><span class="typ">Ubuntu</span><span class="pln"> container </span><span class="kwd">with</span><span class="pun">:</span><span class="pln">
+ $ docker run </span><span class="pun">-</span><span class="pln">it ubuntu bash
+
+</span><span class="typ">For</span><span class="pln"> more examples </span><span class="kwd">and</span><span class="pln"> ideas</span><span class="pun">,</span><span class="pln"> visit</span><span class="pun">:</span><span class="pln">
+ https</span><span class="pun">:</span><span class="com">//docs.docker.com/userguide/</span></code></pre>
+
+<p>با دیدن این خروجی میتوانید مطمئن شوید که عمل نصب به درستی انجام شده و جعبه ابزار داکر شما قابل استفاده است.</p>
+
+<p>اگر به هنگام اجرای کانتینرها با مشکلاتی برای دانلود image ها از Docker Hub مواجه شدید، میتوانید با تنظیم یک mirror به صورتی که در <a href="https://groups.google.com/forum/#!topic/software-taak/xRmFWrozRoo">این گروه</a> گفته شده، دوباره این کار را امتحان کنید.
+اگر فکر میکنید برای کار با داکر نیاز به کمک بیشتری دارید و یا علاقه مند هستید که در آینده به یک سرور مجازی برای یادگیری داکر دسترسی داشته باشید میتوانید <a href="https://docs.google.com/forms/d/1fIYtXM6UaV5pFRBAkNKVNHzBnUg157Sedxds5xYPWDI/viewform?usp=send_form">این فرم کوتاه</a> را پر کنید تا به یک گروه Slack به نام <strong>elastico-users</strong> که برای همین کار ایجاد شده است دعوت شوید. در آنجا میتوانید از اعضای با تجربه تر گروه هم کمک بگیرید.</p>
+
+<p style="color:grey;font-size:small;text-align:center;">کلیه حقوق محفوظ است. بازنشر این مطلب با ذکر آدرس این سایت مجاز است.</p>
+
+
+</body></html>
