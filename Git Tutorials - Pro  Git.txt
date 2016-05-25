@@ -65,7 +65,9 @@ Pushing
 
 git.exe push --progress "origin" master:master
 
+Pushing all branches to the remote server (use --all option)
 
+git.exe push --all --progress "origin"
 
 Tagging
 ---------------------------------------------------
