@@ -57,7 +57,14 @@ Fast-forward
 Sabbagh:
 Just the current branch (master) is  updated, however netty-2 branch is not up to date! How to update netty-2 branch? switch to it and update it?
 
-"--progress" options shows +- in front of files.
+"--progress" options shows +/- in front of files to show how much they has been altered.
+
+_____________________________________________________
+
+Pushing
+
+git.exe push --progress "origin" master:master
+
 
 
 Tagging
