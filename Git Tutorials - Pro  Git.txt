@@ -16,8 +16,48 @@ git remote add origin https://github.com/javadsabbagh/technical-notes.git
 git push -u origin master
 
 
+Tortoise Git
+--------------------------------------------
+Tortoise Git is a nice tool to practice comands.
 
 
+Pulling 
+
+git.exe pull -v --progress "origin"
+
+POST git-upload-pack (1007 bytes)
+remote: Counting objects: 515, done.
+remote: Compressing objects: 100% (102/102), done.
+Receiving objects: 100% (515/515), 80.53 KiB | 102.00 KiB/s, done.
+Resolving deltas: 100% (192/192), completed with 96 local objects.
+remote: Total 515 (delta 178), reused 134 (delta 134), pack-reused 201
+From https://github.com/RestComm/jss7
+3025312..dee1f1e  master     -> origin/master
+= [up to date]      1.x        -> origin/1.x
+= [up to date]      2.0.x      -> origin/2.0.x
+= [up to date]      2.1.x      -> origin/2.1.x
+= [up to date]      SCCP_198   -> origin/SCCP_198
+= [up to date]      branch29   -> origin/branch29
+b4a1e3e..c7064ab  netty-2    -> origin/netty-2
+Updating 3025312..dee1f1e
+Fast-forward
+.../ss7/cap/isup/GenericNumberCapImpl.java         |  28 ++-
+.../map/primitives/ArrayListSerializingBase.java   |  13 +-
+.../AnyTimeInterrogationResponseImpl.java          |  79 ++++--
+.../subscriberInformation/SubscriberInfoImpl.java  | 275 ++++++++++++++-------
+.../subscriberManagement/CUGIndexImpl.java         |   6 +
+.../org/mobicents/protocols/ss7/sccp/Rule.java     |   2 +
+.../ss7/sccp/impl/SccpRoutingControl.java          |   2 +-
+.../protocols/ss7/sccp/impl/router/RuleImpl.java   |  88 ++++++-
+.../ss7/sccp/impl/oam/SccpExecutorTest.java        |   2 +-
+.../protocols/ss7/sccp/impl/router/RouterTest.java |  61 ++++-
+10 files changed, 416 insertions(+), 140 deletions(-)
+
+
+Sabbagh:
+Just the current branch (master) is  updated, however netty-2 branch is not up to date! How to update netty-2 branch? switch to it and update it?
+
+"--progress" options shows +- in front of files.
 
 
 Tagging
