@@ -35,12 +35,38 @@ JSP:
 	http://stackoverflow.com/questions/2095397/what-is-the-difference-between-jsf-servlet-and-jsp/2097732#2097732
 	http://stackoverflow.com/questions/8025460/why-does-jsp-and-jstl-el-take-a-different-way-to-perform-a-resource-injection
 	
-	
-Eclipse Mars (4.5)
-Eclipse Luna (4.4)
-Eclipse Kepler (4.3)
-Eclipse Juno (4.2)
+Eclipse Versions	
+	Eclipse Mars (4.5)
+	Eclipse Luna (4.4)
+	Eclipse Kepler (4.3)
+	Eclipse Juno (4.2)
 
+Wildfly Swarm
+	http://mvnrepository.com/artifact/org.wildfly.swarm/security
+	WildFly Swarm User's Guide
+		https://www.gitbook.com/book/wildfly-swarm/wildfly-swarm-users-guide/details    (on Git Book)
+		http://wildfly-swarm.io/
+	Example
+		https://github.com/wildfly-swarm/wildfly-swarm-examples
+	Getting started with WildFly Swarm
+		http://www.mastertheboss.com/jboss-server/wildfly-swarm/getting-started-with-wildfly-swarm
+	WILDFLY SWARM PROJECT GENERATOR
+		http://wildfly-swarm.io/generator/
+	
+	
+JMX
+	http://www.journaldev.com/1352/what-is-jmx-mbean-jconsole-tutorial
+	https://blog.synyx.de/2012/05/how-to-monitor-and-manage-your-java-application-with-jmx/
+	http://www.ovalbusinesssolutions.co.uk/thoughts/managed-beans-what-they-are-how-to-create-them
 	
 
+RMI Properties	
+	http://docs.oracle.com/javase/7/docs/technotes/guides/rmi/sunrmiproperties.html
+	
+JPA 2.1 – 12 features every developer should know
+	http://www.thoughts-on-java.org/jpa-21-overview/
+	
+Java EE MVC
+	https://www.linkedin.com/pulse/modern-web-apps-hamed-hatami?trk=hp-feed-article-title-publish
+		
 	
