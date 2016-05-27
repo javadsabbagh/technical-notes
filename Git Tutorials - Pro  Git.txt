@@ -1,4 +1,14 @@
 
+
+Git Configuration
+------------------------------------------
+git config --global user.name   "your user name"
+git config --global user.email  "your_email@example.com"
+git config --list
+
+
+Creating Repository
+-------------------------------------------
 When creating a new repository in Github:
 It shows you a messsage hot to initialize the repo.
 1- …or create a new repository on the command line
