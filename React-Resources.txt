@@ -79,7 +79,16 @@ React online documents:
 		
 Books:
 	ReactJS by Example – Building Modern Web Applications with React
-
+	
+	(full-featuerd sample of react)
+Building Kanban with Reat	
+	http://survivejs.com/webpack_react/building_kanban/
+	
+	Learn ReactJS with 20 Free Online Tutorials
+	
+Online videos
+	https://learnreact.com/lessons/
+	
 
 		
 --------------------------------------------------------------------------------
@@ -196,8 +205,52 @@ AlloyUI
 		https://github.com/liferay/alloy-taglibs/tree/master/alloy-web
 		
 	https://github.com/liferay/alloy-chat-launcher
-	
+	https://www.infoq.com/articles/react-native-introduction?utm_campaign=rightbar_v2&utm_source=infoq&utm_medium=articles_link&utm_content=link_text
 		
+	https://github.com/alpertuna/react-metismenu
+	http://mm.onokumus.com/zurb.html
+	https://github.com/onokumus/metisMenu
+	https://shwr.me/shower/themes/ribbon/#20
+	https://select2.github.io/examples.html#programmatic-control
+	https://help.github.com/articles/working-with-advanced-formatting/
+	http://programmers.stackexchange.com/questions/128712/what-is-a-markdown-formatted-readme-file-on-github
+	http://stackoverflow.com/questions/2304863/how-to-write-a-good-readme
+	Search MD file conventions (not difficult)
+	http://sscce.org/
+	
+	Java Task  timeouts
+	http://stackoverflow.com/questions/2275443/how-to-timeout-a-thread
+	http://stackoverflow.com/questions/15612753/java-timer-with-timeout-capability
+	http://v4all123.blogspot.com/2013/01/timer.htmls
+	http://javarevisited.blogspot.com/2015/01/how-to-use-future-and-futuretask-in-Java.html
+	http://www.journaldev.com/1650/java-futuretask-example-program
+	http://www.journaldev.com/1090/java-callable-future-example
+	
+	Java Play Sound
+	http://alvinalexander.com/java/java-audio-example-java-au-play-sound	
+	http://stackoverflow.com/questions/2416935/how-to-play-wav-files-with-java
+	http://stackoverflow.com/questions/6045384/playing-mp3-and-wav-in-java
+	
+	http://searchnetworking.techtarget.com/definition/E-carrier-system
+	http://www.gl.com/Brochures/Brochures/MAPS-Sigtran-Brochure.pdf
+	http://www.acacia-net.com/wwwcla/howto/ss7_simu_dual.htm
+	https://www.etesters.com/see/ISUP
+	http://www.indes.com/telecom/files/producten/diversen/366/Data_sheet_ISUP.pdf
+	https://www.gl.com/press-release/enhanced-sigtran-protocol-test-suite-press-release.html
+	
+	http://wiki.eclipse.org/GEF/Articles,_Tutorials,_Slides
+	http://nyssen.blogspot.de/2015/06/gef4-mission-to-mars-accomplished.html
+	https://wiki.eclipse.org/GEF/GEF4/Cloudio
+	https://wiki.eclipse.org/GEF/GEF4/Zest
+	https://wiki.eclipse.org/File:GEF4-Zest-FX-behaviors.png
+	http://nyssen.blogspot.com/2010/12/draw2d-examples-hidden-treasure.html	
+	http://wiki.eclipse.org/GEF/Examples
+	https://eclipse.org/articles/Article-GEF-diagram-editor/shape.html
+	http://www.eclipse.org/articles/Article-GEF-Draw2d/GEF-Draw2d.html
+	https://github.com/oxo42/vimrc
+	
+	
+	
 	
 
 
