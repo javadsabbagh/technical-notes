@@ -30,8 +30,7 @@ links:
 		https://libgdx.badlogicgames.com/features.html
 	
 James Gosling on Oracle, Once Again
-	https://dzone.com/articles/james-gosling-on-oracle?utm_content=buffer4be13&utm_medium=social&utm_source=linkedin.com&utm_campaign=buffer
-		
+	https://dzone.com/articles/james-gosling-on-oracle?utm_content=buffer4be13&utm_medium=social&utm_source=linkedin.com&utm_campaign=buffer		
 	https://soundcloud.com/vjug/java-council-episode-11
 	
 	
@@ -40,7 +39,7 @@ James Gosling on Oracle, Once Again
 	https://en.wikipedia.org/wiki/Communications_protocols
 	https://en.wikipedia.org/wiki/IPX/SPX
 	
-Mat	
+Math	
 	http://www.intmath.com/blog/mathematics/riemann-sums-4715
 	Applications integration Problem Solver
 		http://www.intmath.com/help/problem-solver.php?title=applications-integration&fid=30&refTitle=12.%20Arc%20Length%20of%20a%20Curve%20in%20Parametric%20or%20Polar%20Coordinates

@@ -218,7 +218,7 @@ AlloyUI
 	Search MD file conventions (not difficult)
 	http://sscce.org/
 	
-	Java Task  timeouts
+	Java Task Timeouts
 	http://stackoverflow.com/questions/2275443/how-to-timeout-a-thread
 	http://stackoverflow.com/questions/15612753/java-timer-with-timeout-capability
 	http://v4all123.blogspot.com/2013/01/timer.htmls
