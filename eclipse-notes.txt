@@ -1,4 +1,4 @@
-
+﻿
 Eclipse Notes
 -------------------------------
 
@@ -67,3 +67,7 @@ http://www.programcreek.com/2012/10/eclipse-platformui-examples/
 Swing/SWT Integration
 -------------------------------
 http://www.eclipse.org/articles/article.php?file=Article-Swing-SWT-Integration/index.html
+
+
+http://www.eclipse.org/sirius/gallery.html
+
