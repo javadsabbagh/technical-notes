@@ -62,3 +62,8 @@ http://www.programcreek.com/2012/10/eclipse-platformui-examples/
 10- Error message during installation of PyDev for Eclipse
 11- Eclipse RCP Tutorial: Eclipse Rich Client Application with a View
 12- JUnit Tutorial (1) – Use JUnit under Eclipse
+
+
+Swing/SWT Integration
+-------------------------------
+http://www.eclipse.org/articles/article.php?file=Article-Swing-SWT-Integration/index.html
