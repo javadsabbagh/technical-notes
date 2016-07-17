@@ -1,0 +1,10 @@
+# Open Source Architecture Book #
+- [The Architecture of Open Source Applications](http://www.aosabook.org/en/)
+- [Firefox Release Engineering](http://www.aosabook.org/en/ffreleng.html)
+- [A 3D Modeller](http://www.aosabook.org/en/500L/a-3d-modeller.html)
+- [Optical Character Recognition (OCR)](http://www.aosabook.org/en/500L/optical-character-recognition-ocr.html)
+- [Audacity](http://www.aosabook.org/en/audacity.html)
+- [The Bourne-Again Shell](http://www.aosabook.org/en/bash.html)
+- [LLVM](http://www.aosabook.org/en/llvm.html)
+- [Visualization Toolkit (VTK)](http://www.aosabook.org/en/vtk.html)
+- [Git Architecture](http://www.aosabook.org/en/git.html)

@@ -1,14 +1,16 @@
 
 
-Git Configuration
-------------------------------------------
+## Git Configuration
+```sh
 git config --global user.name   "your user name"
 git config --global user.email  "your_email@example.com"
 git config --list
+```
 
+----------
 
-Creating Repository
--------------------------------------------
+## Creating Repository
+
 When creating a new repository in Github:
 It shows you a messsage hot to initialize the repo.
 1- …or create a new repository on the command line
@@ -25,15 +27,18 @@ git push -u origin master
 git remote add origin https://github.com/javadsabbagh/technical-notes.git
 git push -u origin master
 
+----------
 
-Tortoise Git
---------------------------------------------
+## Tortoise Git
+
 Tortoise Git is a nice tool to practice comands.
 
 
 Pulling 
 
+```sh
 git.exe pull -v --progress "origin"
+
 
 POST git-upload-pack (1007 bytes)
 remote: Counting objects: 515, done.
@@ -62,32 +67,37 @@ Fast-forward
 .../ss7/sccp/impl/oam/SccpExecutorTest.java        |   2 +-
 .../protocols/ss7/sccp/impl/router/RouterTest.java |  61 ++++-
 10 files changed, 416 insertions(+), 140 deletions(-)
-
+```
 
 Sabbagh:
 Just the current branch (master) is  updated, however netty-2 branch is not up to date! How to update netty-2 branch? switch to it and update it?
 
 "--progress" options shows +/- in front of files to show how much they has been altered.
 
-_____________________________________________________
+----------
 
-Pushing
-
+## Pushing
+```sh
 git.exe push --progress "origin" master:master
+```
 
 Pushing all branches to the remote server (use --all option)
-
+```sh
 git.exe push --all --progress "origin"
+```
+----------
 
-Tagging
----------------------------------------------------
+## Tagging
+
 Listing Your Tags:
 $ git tag
 v0.1
 v1.3
 
 Search for tags with a particular pattern:
+```sh
 $ git tag -l "v1.8.5*"
+```
 v1.8.5
 v1.8.5-rc0
 v1.8.5-rc1
@@ -112,8 +122,10 @@ It’s generally recommended that you create annotated tags so you can have all
 this information.
 
 Annotated Tags
+```sh
 $ git tag -a v1.4 -m "my version 1.4"
 $ git tag
+```
 v0.1
 v1.3
 v1.4
@@ -128,8 +140,10 @@ $ git show v1.4
 Lightweight Tags
 To create a lightweight tag, don’t supply the -a, -s, or -m option:
 
+```sh
 $ git tag v1.4-lw
 $ git tag
+```
 v0.1
 v1.3
 v1.4
@@ -137,34 +151,39 @@ v1.4-lw
 v1.5
 
 
+```sh
 $ git show v1.4-lw
+```
+----------
 
-
-
-Git Aliases
----------------------------------------------------
+## Git Aliases
+```sh
 $ git config --global alias.co checkout
 $ git config --global alias.br branch
 $ git config --global alias.ci commit
 $ git config --global alias.st status
-
+```
 This technique can also be very useful in creating commands that you think
 should exist. e.g.
 
+```sh
 $ git config --global alias.unstage 'reset HEAD --'
+```
 
 This makes the following two commands equivalent:
+```sh
 $ git unstage fileA          # a lot easier  to remember
 $ git reset HEAD -- fileA    # original command, hard to remember
+```
 
 
 Another example :
-
+```sh
 $ git config --global alias.last 'log -1 HEAD'
 $ git last
+```
 
-
-________________________________________________________________________________
+----------
 
 Git’s killer feature: its branching model.
 

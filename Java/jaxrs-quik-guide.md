@@ -1,11 +1,11 @@
 
-
+```bash
 curl http://www.apress.com/resource/csv/bookcategory?cat=32 | sed -n 2~1p | wc -l
 
 curl -v http://www.apress.com/book/catalog?category=32
 	-v means verbose
 	-X specifies http method
-
+```	
 
 Content Types
 	text/html
@@ -15,7 +15,7 @@ Content Types
 	application/json
 
 
-
+```java
 @Path("/book")
 public class BookResource {
 	@GET
@@ -24,6 +24,7 @@ public class BookResource {
 		return "H2G2";
 	}
 }
+
 
 
 @Path("books")
@@ -84,7 +85,7 @@ public class CustomerResource {
 	}
 
 }
-
+```
 
 If a resource is capable of producing more than one Internet media type, the resource method
 chosen will correspond to the most acceptable media type, as declared by the client in the Accept
@@ -97,9 +98,7 @@ Note Jersey adds a BadgerFish mapping of JAXB XML to JSON. BadgerFish ( http://b
 is a convention for translating an XML document into a JSON object so it’s easy to manipulate within JavaScript.
 
 
-
-
-
+```java
 
 @Context
 private UriInfo uriInfo;
@@ -144,18 +143,23 @@ public Book getBook(@CookieParam("sessionid") int sessionid)
 @GET
 public Response getCustomers(@DefaultValue("50") @QueryParam("age") int age)
 
+```
 
 
-
+```bash
 curl -X POST --data-binary "{ \"title\":\"H2G2\", \"description\":\"Scifi IT book\", \"illustrations\":\"false\",\"isbn\":\"134-234\",\"nbOfPage\":\"241\", \"price\":\"24.0\" }" -H "Content-Type: application/json"  http://localhost:8080/chapter15-resource-2.0/rs/books –v
 curl -X GET -H "Accept: application/json"  http://localhost:8080/chapter15-resource-2.0/rs/books/601
 curl -X GET -H "Accept: application/xml"  http://localhost:8080/chapter15-resource-2.0/rs/books/601
 curl -X DELETE http://localhost:8080/chapter15-resource-2.0/rs/books/601 -v
+```
 
+```java
 @ApplicationPath("rs")
 public class ApplicationConfig extends Application {
 }
+```
 
+```bash
 curl -X GET -H "Accept: application/json"  http://localhost:8080/chapter15-resource-2.0/rs/books
 curl -X DELETE http://localhost:8080/chapter15-resource-2.0/rs/books/601
 
@@ -189,5 +193,5 @@ curl -X GET -H "Accept: application/xml"  http://localhost:8080/chapter15-resour
 
 // Deletes the book with ID 601
 curl -X DELETE http://localhost:8080/chapter15-resource-2.0/rs/books/601
-
+```
 

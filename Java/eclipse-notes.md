@@ -1,6 +1,10 @@
-﻿
-Eclipse Notes
--------------------------------
+# Eclipse Resources #
+
+## Eclipse Architecture ##
+
+- [The architecture of Eclipse](http://www.aosabook.org/en/eclipse.html)
+
+----------
 
 Graphiti / GEF / Draw2D
 
@@ -35,7 +39,9 @@ Eclipse RCP Tutorial: How to install PDE
 http://www.programcreek.com/2013/02/eclipse-rcp-tutorial-how-to-install-pde/
 
 Decipher Eclipse Architecture: IAdaptable – 3 parts
----------------
+
+----------
+
 Decipher Eclipse Architecture: IAdaptable – Part 1 – Brief Introduction
 http://www.programcreek.com/2011/09/java-design-pattern-adapter/
 
@@ -65,7 +71,9 @@ http://www.programcreek.com/2012/10/eclipse-platformui-examples/
 
 
 Swing/SWT Integration
--------------------------------
+
+----------
+
 http://www.eclipse.org/articles/article.php?file=Article-Swing-SWT-Integration/index.html
 
 

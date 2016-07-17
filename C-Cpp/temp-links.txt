@@ -107,9 +107,6 @@ GitBook
 	https://www.gitbook.com/book/javadsabbagh/test-book/edit#/edit/master/book.json
 	
 	
-	
-	http://www.bloomberg.com/news/audio/2016-05-27/bloomberg-law-google-triumphs-over-oracle-in-court-audio
-	
 JavaFX Tasks in Background
 	https://gist.github.com/jewelsea/4989970
 	http://stackoverflow.com/questions/9165251/execute-task-in-background-in-javafx

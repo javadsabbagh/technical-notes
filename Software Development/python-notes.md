@@ -72,11 +72,19 @@ winPython: Portable Scientific Python 2/3 32/64bit Distribution for Windows
 - [winPython](https://winpython.github.io/)
 
 - [Python Data Analysis Library](http://pandas.pydata.org/)
- -[Matplotlib Examples]()
+ -[Matplotlib Examples](http://matplotlib.org/examples/index.html)
+ 
+ - [Spyder Installaton](https://pythonhosted.org/spyder/installation.html#installing-on-linux)
+ - [How To Make WinPython](https://github.com/winpython/winpython/wiki/How-To-Make-WinPython)
+ - [WinPython package at sf.net](https://sourceforge.net/projects/winpython/files/WinPython_3.5/3.5.1.3/)
+ - 
 
 ----------
 
-
+## Articles ##
+- [Python Packaging Architecture](http://www.aosabook.org/en/packaging.html)
+- [SQLAlchemy Architecture](http://www.aosabook.org/en/sqlalchemy.html)
+- []()
 
 
 
