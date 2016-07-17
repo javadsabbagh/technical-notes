@@ -71,3 +71,10 @@ Some useful informaion on stackoverflow
 - https://www.linkedin.com/pulse/modern-web-apps-hamed-hatami?trk=hp-feed-article-title-publish
 		
 	
+- [What the JIT!? Anatomy of the OpenJDK HotSpot VM](https://www.infoq.com/articles/OpenJDK-HotSpot-What-the-JIT?utm_source=infoqWeeklyNewsletter&utm_medium=WeeklyNL_EditorialContent_java&utm_campaign=07052016news)
+	
+- [Understanding HotSpot JVM Performance with JITWatch](https://www.infoq.com/presentations/jitwatch?utm_campaign=rightbar_v2&utm_source=infoq&utm_medium=presentations_link&utm_content=link_text)
+	
+- [Node4J: Running Node.js in a JavaWorld](https://www.infoq.com/presentations/node4j-nodejs-java?utm_campaign=rightbar_v2&utm_source=infoq&utm_medium=presentations_link&utm_content=link_text)
+	
+- [Examining Low Pause Garbage Collection in Java](https://www.infoq.com/presentations/G1-Shenandoah?utm_campaign=rightbar_v2&utm_source=infoq&utm_medium=presentations_link&utm_content=link_text)

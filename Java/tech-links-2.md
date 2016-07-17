@@ -30,7 +30,7 @@
 
 
 ## Grady Booch
-https://www.computer.org/web/computingnow/oncomputing?p_p_id=33&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-2&p_p_col_count=1&_33_struts_action=%2Fblogs%2Fview&_33_delta=20&_33_keywords=&_33_advancedSearch=false&_33_andOperator=true&p_r_p_564233524_resetCur=false&cur=1
+- https://www.computer.org/web/computingnow/oncomputing?p_p_id=33&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-2&p_p_col_count=1&_33_struts_action=%2Fblogs%2Fview&_33_delta=20&_33_keywords=&_33_advancedSearch=false&_33_andOperator=true&p_r_p_564233524_resetCur=false&cur=1
 
 
 * [Red Hat makes container development easier](http://www.zdnet.com/article/red-hat-makes-container-development-easier/)
@@ -60,27 +60,6 @@ https://www.computer.org/web/computingnow/oncomputing?p_p_id=33&p_p_lifecycle=0&
 
 * [Log4j Property File Sample](http://www.mkyong.com/logging/log4j-log4j-properties-examples/)
 
-## Apache Kafka
-- https://en.wikipedia.org/wiki/Apache_Kafka
-- http://kafka.apache.org/
-- http://kafka.apache.org/documentation.html
-- https://en.wikipedia.org/wiki/Transaction_log
-- https://en.wikipedia.org/wiki/Apache_ActiveMQ
-
-
-	
-- [Distributed Systems in Practice, in Theory](https://www.infoq.com/presentations/distributed-systems-patterns?utm_source=infoqWeeklyNewsletter&utm_medium=WeeklyNL_EditorialContent_architecture-design&utm_campaign=07052016news)
-
-- [Large-Scale Stream Processing with Apache Kafka](https://www.infoq.com/presentations/apache-kafka-streams?utm_source=infoqWeeklyNewsletter&utm_medium=WeeklyNL_EditorialContent_data-science&utm_campaign=07052016news)
-
-- [What the JIT!? Anatomy of the OpenJDK HotSpot VM](https://www.infoq.com/articles/OpenJDK-HotSpot-What-the-JIT?utm_source=infoqWeeklyNewsletter&utm_medium=WeeklyNL_EditorialContent_java&utm_campaign=07052016news)
-	
-- [Understanding HotSpot JVM Performance with JITWatch](https://www.infoq.com/presentations/jitwatch?utm_campaign=rightbar_v2&utm_source=infoq&utm_medium=presentations_link&utm_content=link_text)
-	
-- [Node4J: Running Node.js in a JavaWorld](https://www.infoq.com/presentations/node4j-nodejs-java?utm_campaign=rightbar_v2&utm_source=infoq&utm_medium=presentations_link&utm_content=link_text)
-	
-- [Examining Low Pause Garbage Collection in Java](https://www.infoq.com/presentations/G1-Shenandoah?utm_campaign=rightbar_v2&utm_source=infoq&utm_medium=presentations_link&utm_content=link_text)
-
 
 ## Reactive Programming
 - http://www.allitebooks.com/reactive-programming-with-rxjs/
@@ -97,8 +76,8 @@ https://www.computer.org/web/computingnow/oncomputing?p_p_id=33&p_p_lifecycle=0&
 
 - [Introducing LambCI — a serverless build system](https://medium.com/@hichaelmart/lambci-4c3e29d6599b#.6atoo4m3d)
 
-ORMLite
-http://ormlite.com/javadoc/ormlite-core/doc-files/ormlite_toc.html#SEC_Contents
+## ORMLite
+- http://ormlite.com/javadoc/ormlite-core/doc-files/ormlite_toc.html#SEC_Contents
 
 ----------
 
