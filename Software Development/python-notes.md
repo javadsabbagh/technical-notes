@@ -8,6 +8,7 @@
 3. [ReactJS with Django - real usage](http://stackoverflow.com/questions/28610372/reactjs-with-django-real-usage)
 4. [Lessons learned from building a larger app with React.js](https://gijs.github.io/2015/08/26/lessons-learned-from-building-a-larger-app-with-react-dot-js.html)
 5. [Lessons learned from buildout a django site with a reactjs front-end](http://reinout.vanrees.org/weblog/2015/08/31/django-site-with-javascript-frontend.html)
+
 ----------
 
 ## Django ##
@@ -20,6 +21,7 @@
 - [Getting started with Django](https://www.djangoproject.com/start/)
 - [Django at a glance](https://docs.djangoproject.com/en/1.9/intro/overview/)
 - [Why Django?](https://www.djangoproject.com/start/overview/)
+
 ----------
 
 ## Books ##

@@ -1,21 +1,22 @@
-Books
-http://www.allitebooks.com/nosql-for-dummies/
-http://www.allitebooks.com/redis-essentials/
-http://www.allitebooks.com/getting-started-with-nosql/
-http://www.allitebooks.com/c-3-0-design-patterns/
-http://www.allitebooks.com/essential-c-6-0-5th-edition/
-http://www.allitebooks.com/c-6-0-cookbook-4th-edition/
-http://www.allitebooks.com/c-6-0-and-the-net-5-framework-7th-edition/
-http://www.allitebooks.com/exploring-neural-networks-with-c/
-http://www.allitebooks.com/concurrency-in-c-cookbook/
-http://www.allitebooks.com/c-multithreaded-and-parallel-programming/
-http://www.allitebooks.com/async-in-c-5-0/
-http://www.allitebooks.com/clr-via-c-4th-edition/
-http://www.allitebooks.com/introduction-to-hpc-with-mpi-for-data-science/
-http://www.allitebooks.com/digital-video-concepts-methods-and-metrics/
-http://www.allitebooks.com/image-and-video-processing-in-the-compressed-domain/
-http://www.allitebooks.com/heterogeneous-computing-with-opencl-2nd-edition/
-http://www.allitebooks.com/opencl-in-action/
-http://www.allitebooks.com/scala-high-performance-programming/
-http://www.allitebooks.com/cjkv-information-processing-2nd-edition/
-http://www.allitebooks.com/assembly-language-for-x86-processors-7th-edition/
+# Books #
+
+- [NoSQL for Dummies](http://www.allitebooks.com/nosql-for-dummies/)
+- [Redis Essentials](http://www.allitebooks.com/redis-essentials/)
+- [Getting Started With NoSQL](http://www.allitebooks.com/getting-started-with-nosql/)
+- [C# 3.0 Design Patterns](http://www.allitebooks.com/c-3-0-design-patterns/)
+- [Essential C#6.0 5th Edition](http://www.allitebooks.com/essential-c-6-0-5th-edition/)
+- [C# 6.0 Cookbook 4th Edition](http://www.allitebooks.com/c-6-0-cookbook-4th-edition/)
+- [C# 6.0 and the .net 5 Framework 7th Edition](http://www.allitebooks.com/c-6-0-and-the-net-5-framework-7th-edition/)
+- [Exploring Neural Networks with C#](http://www.allitebooks.com/exploring-neural-networks-with-c/)
+- [Concurrency in C# Cookbook](http://www.allitebooks.com/concurrency-in-c-cookbook/)
+- [C# Multithreaded and Parallel Programming](http://www.allitebooks.com/c-multithreaded-and-parallel-programming/)
+- [async in C# 5.0](http://www.allitebooks.com/async-in-c-5-0/)
+- [CLR via C# 4th Edition](http://www.allitebooks.com/clr-via-c-4th-edition/)
+- [Introduction to HPC with MPI for Data Science](http://www.allitebooks.com/introduction-to-hpc-with-mpi-for-data-science/)
+- [Digital Video Concepts Methods and Metrics](http://www.allitebooks.com/digital-video-concepts-methods-and-metrics/)
+- [Image and video processing in the compressed domain](http://www.allitebooks.com/image-and-video-processing-in-the-compressed-domain/)
+- [Heterogeneous Computing with OpenCL 2nd Edition](http://www.allitebooks.com/heterogeneous-computing-with-opencl-2nd-edition/)
+- [OpenCL in Action](http://www.allitebooks.com/opencl-in-action/)
+- [Scala High Performance Programming](http://www.allitebooks.com/scala-high-performance-programming/)
+- [cjkv Information Processing 2nd Edition](http://www.allitebooks.com/cjkv-information-processing-2nd-edition/)
+- [Assembly Language for x86 Processors 7th Edition](http://www.allitebooks.com/assembly-language-for-x86-processors-7th-edition/)
