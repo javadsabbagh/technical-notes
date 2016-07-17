@@ -1,5 +1,6 @@
-I/O opertions result inn netty:
+I/O opertions result in netty:
 
+```text
                                        +---------------------------+
                                        | Completed successfully    |
                                        +---------------------------+
@@ -16,3 +17,4 @@ I/O opertions result inn netty:
                                   +---->      isDone() = true      |
                                        | isCancelled() = true      |
                                        +---------------------------+
+```									   

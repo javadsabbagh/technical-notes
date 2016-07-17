@@ -1,4 +1,5 @@
-Setting up the benchmarking project.The following command will generate the new JMH-driven project in test folder:
+Setting up the benchmarking project. The following command will generate the new JMH-driven project in the test folder:
+```sh
 $ mvn archetype:generate \
           -DinteractiveMode=false \
           -DarchetypeGroupId=org.openjdk.jmh \
@@ -151,3 +152,4 @@ Usage: java -jar ... [regexp*] [options]
                               to already selected by the primary filters. Harness
                               will not measure these benchmarks, but only use them
                               for the warmup.
+```

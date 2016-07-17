@@ -1,12 +1,14 @@
+```bash
 $ mvn archetype help
 $ mvn archetype:generate -DarchetypeGroupId=  -DarchetypeArtifactId=    -DarchetypeVersion=  
+```
 
 For JavaEE search this  file. e.g:
 
 	org.wildfly.archetype:wildfly-javaee7-webapp-archetype
 
 
-
+```text
 [INFO] No archetype defined. Using maven-archetype-quickstart (org.apache.maven.archetypes:maven-archetype-quickstart:1.0)
 Choose archetype:
 1: remote -> am.ik.archetype:maven-reactjs-blank-archetype (Blank Project for React.js)
@@ -1774,3 +1776,4 @@ NOTE: Retrolambda support provided "as is" - if you have any problems, please fi
 1585: remote -> us.fatehi:schemacrawler-archetype-plugin-dbconnector (-)
 1586: remote -> us.fatehi:schemacrawler-archetype-plugin-lint (-)
 Choose a number or apply filter (format: [groupId:]artifactId, case sensitive contains): 774: 
+```
