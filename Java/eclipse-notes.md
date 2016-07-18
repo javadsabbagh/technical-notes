@@ -19,6 +19,16 @@ A jar file consists graphiti source and lots of samples!
 
 - [Display a UML Diagram using Draw2D](http://www.eclipse.org/articles/Article-GEF-Draw2d/GEF-Draw2d.html)
 
+- http://wiki.eclipse.org/GEF/Articles,_Tutorials,_Slides
+- http://nyssen.blogspot.de/2015/06/gef4-mission-to-mars-accomplished.html
+- https://wiki.eclipse.org/GEF/GEF4/Cloudio
+- https://wiki.eclipse.org/GEF/GEF4/Zest
+- https://wiki.eclipse.org/File:GEF4-Zest-FX-behaviors.png
+- http://nyssen.blogspot.com/2010/12/draw2d-examples-hidden-treasure.html	
+- http://wiki.eclipse.org/GEF/Examples
+- https://eclipse.org/articles/Article-GEF-diagram-editor/shape.html
+- http://www.eclipse.org/articles/Article-GEF-Draw2d/GEF-Draw2d.html
+
 
 ## Eclipse RCP
 

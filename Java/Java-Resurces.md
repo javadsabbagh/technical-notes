@@ -1,3 +1,5 @@
+# Java Resources
+
 ## Finite State Machine:
 * http://stackoverflow.com/questions/13221168/how-to-implement-a-fsm-finite-state-machine-in-java
 * https://en.wikipedia.org/wiki/Finite-state_machine
@@ -78,3 +80,37 @@ Some useful informaion on stackoverflow
 - [Node4J: Running Node.js in a JavaWorld](https://www.infoq.com/presentations/node4j-nodejs-java?utm_campaign=rightbar_v2&utm_source=infoq&utm_medium=presentations_link&utm_content=link_text)
 	
 - [Examining Low Pause Garbage Collection in Java](https://www.infoq.com/presentations/G1-Shenandoah?utm_campaign=rightbar_v2&utm_source=infoq&utm_medium=presentations_link&utm_content=link_text)
+
+
+### Java Task Timeouts
+- http://stackoverflow.com/questions/2275443/how-to-timeout-a-thread
+- http://stackoverflow.com/questions/15612753/java-timer-with-timeout-capability
+- http://v4all123.blogspot.com/2013/01/timer.htmls
+- http://javarevisited.blogspot.com/2015/01/how-to-use-future-and-futuretask-in-Java.html
+- http://www.journaldev.com/1650/java-futuretask-example-program
+- http://www.journaldev.com/1090/java-callable-future-example
+
+
+### Java Play Sound
+- http://alvinalexander.com/java/java-audio-example-java-au-play-sound	
+- http://stackoverflow.com/questions/2416935/how-to-play-wav-files-with-java
+- http://stackoverflow.com/questions/6045384/playing-mp3-and-wav-in-java
+
+### JavaFX Tasks in Background
+- https://gist.github.com/jewelsea/4989970
+- http://stackoverflow.com/questions/9165251/execute-task-in-background-in-javafx
+- http://stackoverflow.com/questions/14941084/javafx2-can-i-pause-a-background-task-service?rq=1
+
+- [Comparing Golang with Java](https://dzone.com/articles/comparing-golang-with-java?edition=170473&utm_source=Daily%20Digest&utm_medium=email&utm_content=POS1&utm_campaign=dd%202016-05-11&userid=1345215)
+			
+
+### Delta Spike
+- https://deltaspike.apache.org/
+- https://deltaspike.apache.org/documentation/jpa.html
+- https://deltaspike.apache.org/documentation/data.html
+- https://rmannibucau.wordpress.com/2013/11/20/deltaspike-data-repositories-with-dtos/
+		
+### Game Programming 
+- https://libgdx.badlogicgames.com/features.html
+		
+		

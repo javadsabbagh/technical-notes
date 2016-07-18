@@ -165,20 +165,6 @@ http://hellotojavaworld.blogspot.com/2010/11/remote-debugging-in-java.html
 - https://github.com/xerial/snappy-java/tree/master/src/main/java/org/xerial/snappy
 
 
-- https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying
-
-
-----------
-
-## Apache Kafka
-
-- https://cwiki.apache.org/confluence/display/KAFKA/Clients
-- http://kafka.apache.org/documentation.html#quickstart_kafkastreams
-- http://hortonworks.com/hadoop-tutorial/realtime-event-processing-nifi-kafka-storm/
-- http://www.tutorialspoint.com/apache_kafka/apache_kafka_workflow.htm
-- http://www.tutorialspoint.com/apache_storm/apache_storm_distributed_messaging_system.htm
-
-
 - http://www.gregbugaj.com/?p=242
 
 ----------

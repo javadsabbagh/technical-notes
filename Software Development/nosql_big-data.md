@@ -23,9 +23,14 @@
 - http://kafka.apache.org/documentation.html
 - https://en.wikipedia.org/wiki/Transaction_log
 - https://en.wikipedia.org/wiki/Apache_ActiveMQ
+- https://cwiki.apache.org/confluence/display/KAFKA/Clients
+- http://kafka.apache.org/documentation.html#quickstart_kafkastreams
+- http://hortonworks.com/hadoop-tutorial/realtime-event-processing-nifi-kafka-storm/
+- http://www.tutorialspoint.com/apache_kafka/apache_kafka_workflow.htm
+- http://www.tutorialspoint.com/apache_storm/apache_storm_distributed_messaging_system.htm
 
-
-	
 - [Distributed Systems in Practice, in Theory](https://www.infoq.com/presentations/distributed-systems-patterns?utm_source=infoqWeeklyNewsletter&utm_medium=WeeklyNL_EditorialContent_architecture-design&utm_campaign=07052016news)
 
 - [Large-Scale Stream Processing with Apache Kafka](https://www.infoq.com/presentations/apache-kafka-streams?utm_source=infoqWeeklyNewsletter&utm_medium=WeeklyNL_EditorialContent_data-science&utm_campaign=07052016news)
+
+- https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying

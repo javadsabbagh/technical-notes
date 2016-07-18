@@ -11,14 +11,6 @@ Links:
 	https://telestax.com/partners/
 	https://github.com/RestComm/jss7/wiki/Build-jSS7-from-Source
 	http://mvnrepository.com/artifact/org.mobicents.protocols.ss7.hardware/restcomm-dialogic/3.0.1343
-	http://docs.telestax.com/restcomm-pages/
-	http://docs.telestax.com/restcomm-rcml-client/
-	http://docs.telestax.com/restcomm-api-gateway/
-	http://docs.telestax.com/restcomm-api-sms-messages/
-	http://docs.telestax.com/restcomm-api-incomingphonenumbers/
-	http://docs.telestax.com/restcomm-api-calls/
-	http://docs.telestax.com/restcomm-api-availablephonenumbers/
-	http://docs.telestax.com/restcomm-quick-start-user-guide/
 	http://mvnrepository.com/artifact/org.mobicents.protocols.ss7.tcap/tcap-api
 	http://mvnrepository.com/open-source/code-analyzers
 	https://www.linkedin.com/pulse/%D8%B1%D9%88%D8%B4%D9%87%D8%A7%DB%8C-%D8%AA%D8%B9%DB%8C%DB%8C%D9%86-%D9%88%D8%A7%D8%AD%D8%AF-%D8%B4%D9%85%D8%A7%D8%B1%D8%B4-%DA%A9%D8%A7%D9%84%D8%A7-%D9%88-%D9%82%DB%8C%D9%85%D8%AA-%DA%AF%D8%B0%D8%A7%D8%B1%DB%8C-%D8%AF%D8%B1-%D8%A7%D9%86%D8%A8%D8%A7%D8%B1-%DA%86%DB%8C%D8%B3%D8%AA-parmis-it
@@ -59,11 +51,7 @@ Links:
 	http://www.openss7.org/sigtran.html
 	https://github.com/openss7/openss7/tree/master/src
 	https://sourceforge.net/projects/cygwinportable/files/
-	http://www.sitepoint.com/getting-started-browserify/
-	http://www.sitepoint.com/introduction-gulp-js/
-	http://www.100percentjs.com/just-like-grunt-gulp-browserify-now/
-	https://www.viget.com/articles/gulp-browserify-starter-faq
-	https://github.com/vigetlabs/gulp-starter
+	
 	
 	http://www.hotscripts.com/blog/top-5-free-opensource-shopping-carts/
 	http://simplecartjs.org/features
@@ -97,7 +85,6 @@ Links:
 	
 	http://mscs.mum.edu/program-structure/career-counseling.html
 	http://blog.eisele.net/2015/10/my-book-modern-java-ee-design-patterns.html
-	http://blog.eisele.net/2016/05/developing-reactive-microservices-with.html
 	http://blog.eisele.net/2016/05/developing-reactive-microservices-with.html
 	http://blog.eisele.net/2016/01/a-refresher-top-5-java-ee-7-frontend.html
 

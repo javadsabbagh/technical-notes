@@ -53,60 +53,40 @@
 - [Year Calendar Widget For Boostrap](http://www.bootstraplibrary.com/year-calendar-widget-for-boostrap/)
 - [Simple jQuery Table Management For Bootstrap – Tablefy](http://www.bootstraplibrary.com/simple-jquery-table-management-for-bootstrap/)
 - [RD Form Automator For Bootstrap](http://www.bootstraplibrary.com/rd-form-automator-bootstrap/)
-- [Quick Search Plugin For Bootstrap]
-http://www.bootstraplibrary.com/quick-search-plugin-for-bootstrap/
-- [Twitter Bootstrap Wizard Plugin]
-http://www.bootstraplibrary.com/twitter-bootstrap-wizard-plugin/
-- [Miminium Bootstrap Admin Template – Miminium]
-http://www.bootstraplibrary.com/miminium-bootstrap-admin-template-miminium/
-Additional JavaScript Controls For Bootstrap – Fuel UX
-http://www.bootstraplibrary.com/additional-javascript-controls-for-bootstrap-fuel-ux/
-Minimizable Bootstrap Modals
-http://www.bootstraplibrary.com/minimizable-bootstrap-modals/
-Bootstrap Colorpicker Plus
-http://www.bootstraplibrary.com/bootstrap-colorpicker-plus/
-Bootstrap Context Menu Plugin
-http://www.bootstraplibrary.com/bootstrap-context-menu-plugin/
-Bootstrap Number Format Plugin – ax5formatter
-http://www.bootstraplibrary.com/bootstrap-number-format-plugin-ax5formatter/
-Dropon Component For Bootstrap
-http://www.bootstraplibrary.com/dropon-component-for-bootstrap/
-jQuery & Bootstrap Toast Plugin – ax5toast
-http://www.bootstraplibrary.com/jquery-bootstrap-toast-plugin-ax5toast/
-Open Source Admin Panel – LifeItUp
-http://www.bootstraplibrary.com/open-source-admin-panel-lifeitup/
-jQuery Grid Editor Plugin For Bootstrap Grid System
-http://www.bootstraplibrary.com/jquery-grid-editor-plugin-for-bootstrap-grid-system/
-Simple Markdown Editing Tool For Bootstrap – Bootstrap Markdown
-http://www.bootstraplibrary.com/simple-markdown-editing-tool-for-bootstrap-bootstrap-markdown/
-Bootstrap & jQuery File Upload Dialog
-http://www.bootstraplibrary.com/bootstrap-jquery-file-upload-dialog/
-Simple jQuery Auto-suggest Plugin For Bootstrap
-http://www.bootstraplibrary.com/simple-jquery-auto-suggest-plugin-for-bootstrap/
-Notifications component for Bootstrap
-http://www.bootstraplibrary.com/notifications-component-for-bootstrap/
-Bootstrap Dropdown With Sliding Submenu
-http://www.bootstraplibrary.com/bootstrap-dropdown-with-sliding-submenu/
-Bootstrap Styled Tags Input Plugin
-http://www.bootstraplibrary.com/bootstrap-styled-tags-input-plugin/
-Bootstrap Dropdown Authentication
-http://www.bootstraplibrary.com/bootstrap-dropdown-authentication/
-Customizable Bootstrap Alert Plugin
-http://www.bootstraplibrary.com/customizable-bootstrap-alert-plugin/
-Simple jQuery Plugin For Bootstrap Based Photo Gallery
-http://www.bootstraplibrary.com/simple-jquery-plugin-for-bootstrap-based-photo-gallery/
-JavaScript Extensions For Dynamic Bootstrap Table
-http://www.bootstraplibrary.com/javascript-extensions-for-dynamic-bootstrap-table/
-Bootstrap Show Password Plugin
-http://www.bootstraplibrary.com/bootstrap-show-password-plugin/
-Basic Calendar UI With jQuery And Bootstrap – ax5calendar
-http://www.bootstraplibrary.com/basic-calendar-ui-with-jquery-and-bootstrap-ax5calendar/
+- [Quick Search Plugin For Bootstrap](http://www.bootstraplibrary.com/quick-search-plugin-for-bootstrap/)
+- [Twitter Bootstrap Wizard Plugin](http://www.bootstraplibrary.com/twitter-bootstrap-wizard-plugin/)
+- [Miminium Bootstrap Admin Template – Miminium](http://www.bootstraplibrary.com/miminium-bootstrap-admin-template-miminium/)
+- [Additional JavaScript Controls For Bootstrap – Fuel UX](http://www.bootstraplibrary.com/additional-javascript-controls-for-bootstrap-fuel-ux/)
+- [Minimizable Bootstrap Modals](http://www.bootstraplibrary.com/minimizable-bootstrap-modals/)
+- [Bootstrap Colorpicker Plus](http://www.bootstraplibrary.com/bootstrap-colorpicker-plus/)
+- [Bootstrap Context Menu Plugin](http://www.bootstraplibrary.com/bootstrap-context-menu-plugin/)
+- [Bootstrap Number Format Plugin – ax5formatter](http://www.bootstraplibrary.com/bootstrap-number-format-plugin-ax5formatter/)
+- [Dropon Component For Bootstrap](http://www.bootstraplibrary.com/dropon-component-for-bootstrap/)
+- [jQuery & Bootstrap Toast Plugin – ax5toast](http://www.bootstraplibrary.com/jquery-bootstrap-toast-plugin-ax5toast/)
+- [Open Source Admin Panel – LifeItUp](http://www.bootstraplibrary.com/open-source-admin-panel-lifeitup/)
+- [jQuery Grid Editor Plugin For Bootstrap Grid System](http://www.bootstraplibrary.com/jquery-grid-editor-plugin-for-bootstrap-grid-system/)
+- [Simple Markdown Editing Tool For Bootstrap – Bootstrap Markdown](http://www.bootstraplibrary.com/simple-markdown-editing-tool-for-bootstrap-bootstrap-markdown/)
+- [Bootstrap & jQuery File Upload Dialog](http://www.bootstraplibrary.com/bootstrap-jquery-file-upload-dialog/)
+- [Simple jQuery Auto-suggest Plugin For Bootstrap](http://www.bootstraplibrary.com/simple-jquery-auto-suggest-plugin-for-bootstrap/)
+- [Notifications component for Bootstrap](http://www.bootstraplibrary.com/notifications-component-for-bootstrap/)
+- [Bootstrap Dropdown With Sliding Submenu](http://www.bootstraplibrary.com/bootstrap-dropdown-with-sliding-submenu/)
+- [Bootstrap Styled Tags Input Plugin](http://www.bootstraplibrary.com/bootstrap-styled-tags-input-plugin/)
+- [Bootstrap Dropdown Authentication](http://www.bootstraplibrary.com/bootstrap-dropdown-authentication/)
+- [Customizable Bootstrap Alert Plugin](http://www.bootstraplibrary.com/customizable-bootstrap-alert-plugin/)
+- [Simple jQuery Plugin For Bootstrap Based Photo Gallery](http://www.bootstraplibrary.com/simple-jquery-plugin-for-bootstrap-based-photo-gallery/)
+- [JavaScript Extensions For Dynamic Bootstrap Table](http://www.bootstraplibrary.com/javascript-extensions-for-dynamic-bootstrap-table/)
+- [Bootstrap Show Password Plugin](http://www.bootstraplibrary.com/bootstrap-show-password-plugin/)
+- [Basic Calendar UI With jQuery And Bootstrap – ax5calendar](http://www.bootstraplibrary.com/basic-calendar-ui-with-jquery-and-bootstrap-ax5calendar/)
 	
 ## jQuery treetable 3.0
 - http://ludovandenboom.com/posts/jquery-treetable-3-0
 	
 	
-		
+- http://www.sitepoint.com/getting-started-browserify/
+- http://www.sitepoint.com/introduction-gulp-js/
+- http://www.100percentjs.com/just-like-grunt-gulp-browserify-now/
+- https://www.viget.com/articles/gulp-browserify-starter-faq
+- https://github.com/vigetlabs/gulp-starter
 	
 		
 		
