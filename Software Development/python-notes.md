@@ -25,7 +25,12 @@
 ----------
 
 ## Books ##
-1. ![image link at amazon]() [Professional Python]()
+
+|  Book Cover   |    Title      |
+| ------------- | ------------- |
+| <img width="100" height="100" alt="cover image" src="">  |  [Professional Python]() |
+| Content Cell  | Content Cell  |
+
 2. [Python Cookbook, 3rd Edition]()
 3. [Programming Python, 4th Edition]()
 4. [Python Network Programming Cookbook]()
