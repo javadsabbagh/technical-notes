@@ -25,24 +25,21 @@
 ----------
 
 ## Books ##
-
-Note: You can also show images of books covers in the list!
-
-1. ![image link at amazon](https://images-na.ssl-images-amazon.com/images/I/41pOw6KJWDL._AC_UL115_.jpg) [Professional Python](http://www.allitebooks.com/professional-python/)
-2. [Python Cookbook, 3rd Edition](http://www.allitebooks.com/python-cookbook-3rd-edition/)
-3. [Programming Python, 4th Edition](http://www.allitebooks.com/programming-python-4th-edition/)
-4. [Python Network Programming Cookbook](http://www.allitebooks.com/python-network-programming-cookbook/)
-5. [Getting Started with Beautiful Soup](http://www.allitebooks.com/getting-started-with-beautiful-soup/)
+1. ![image link at amazon]() [Professional Python]()
+2. [Python Cookbook, 3rd Edition]()
+3. [Programming Python, 4th Edition]()
+4. [Python Network Programming Cookbook]()
+5. [Getting Started with Beautiful Soup]()
 	- [Beautiful Soup : HTML Parser](https://www.crummy.com/software/BeautifulSoup/)
 	- [Beautiful Soup Documentation](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
-6. [Mastering Python](http://www.allitebooks.com/mastering-python/)
-7. [Python High Performance Programming](http://www.allitebooks.com/python-high-performance-programming/)
-8. [Learning scikit-learn: Machine Learning in Python](http://www.allitebooks.com/learning-scikit-learn-machine-learning-in-python/)
-9. [Functional Python Programming](http://www.allitebooks.com/functional-python-programming/)
-10. [Programming in Python 3, 2nd Edition](http://www.allitebooks.com/programming-in-python-3-2nd-edition/)
-11. [Fluent Python](http://www.allitebooks.com/fluent-python/)
-12. [CherryPy Essentials: Web Server of TurboGrears](http://www.allitebooks.com/cherrypy-essentials/)
-13. [Python 3 Web Development](http://www.allitebooks.com/python-3-web-development/)
+6. [Mastering Python]()
+7. [Python High Performance Programming]()
+8. [Learning scikit-learn: Machine Learning in Python]()
+9. [Functional Python Programming]()
+10. [Programming in Python 3, 2nd Edition]()
+11. [Fluent Python]()
+12. [CherryPy Essentials: Web Server of TurboGrears]()
+13. [Python 3 Web Development]()
 
 ----------
 
@@ -77,16 +74,10 @@ winPython: Portable Scientific Python 2/3 32/64bit Distribution for Windows
  - [Spyder Installaton](https://pythonhosted.org/spyder/installation.html#installing-on-linux)
  - [How To Make WinPython](https://github.com/winpython/winpython/wiki/How-To-Make-WinPython)
  - [WinPython package at sf.net](https://sourceforge.net/projects/winpython/files/WinPython_3.5/3.5.1.3/)
- - 
 
 ----------
 
 ## Articles ##
 - [Python Packaging Architecture](http://www.aosabook.org/en/packaging.html)
 - [SQLAlchemy Architecture](http://www.aosabook.org/en/sqlalchemy.html)
-- []()
-
-
-
-
 
