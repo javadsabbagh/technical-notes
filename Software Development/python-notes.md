@@ -29,22 +29,21 @@
 |  Book Cover   |    Title      |
 | ------------- | ------------- |
 | <img width="100" height="100" alt="cover image" src="">  |  [Professional Python]() |
-| Content Cell  | Content Cell  |
-
-2. [Python Cookbook, 3rd Edition]()
-3. [Programming Python, 4th Edition]()
-4. [Python Network Programming Cookbook]()
-5. [Getting Started with Beautiful Soup]()
+| <img width="100" height="100" alt="cover image" src="">  |  [Python Cookbook, 3rd Edition]() |
+| <img width="100" height="100" alt="cover image" src="">  |  [Programming Python, 4th Edition]() |
+| <img width="100" height="100" alt="cover image" src="">  |  [Python Network Programming Cookbook]() |
+| <img width="100" height="100" alt="cover image" src="">  |  [Getting Started with Beautiful Soup]()
 	- [Beautiful Soup : HTML Parser](https://www.crummy.com/software/BeautifulSoup/)
-	- [Beautiful Soup Documentation](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
-6. [Mastering Python]()
-7. [Python High Performance Programming]()
-8. [Learning scikit-learn: Machine Learning in Python]()
-9. [Functional Python Programming]()
-10. [Programming in Python 3, 2nd Edition]()
-11. [Fluent Python]()
-12. [CherryPy Essentials: Web Server of TurboGrears]()
-13. [Python 3 Web Development]()
+	- [Beautiful Soup Documentation](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) |
+| <img width="100" height="100" alt="cover image" src="">  |  [Mastering Python]() |
+| <img width="100" height="100" alt="cover image" src="">  |  [Python High Performance Programming]() |
+| <img width="100" height="100" alt="cover image" src="">  |  [Learning scikit-learn: Machine Learning in Python]() |
+| <img width="100" height="100" alt="cover image" src="">  |  [Functional Python Programming]() |
+| <img width="100" height="100" alt="cover image" src="">  |  [Programming in Python 3, 2nd Edition]() |
+| <img width="100" height="100" alt="cover image" src="">  |  [Fluent Python]() |
+| <img width="100" height="100" alt="cover image" src="">  |  [CherryPy Essentials: Web Server of TurboGrears]() |
+| <img width="100" height="100" alt="cover image" src="">  |  [Python 3 Web Development]() |
+
 
 ----------
 
