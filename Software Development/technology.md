@@ -10,14 +10,6 @@
 - http://spectrum.ieee.org/view-from-the-valley/at-work/start-ups/openbike-charges-phone-lights-and-connects-your-bike-to-the-cloud
 
 
-## D Language
-- https://dlang.org/ctarguments.html
-- http://tour.dlang.org/tour/basics/14
-- https://wiki.dlang.org/Books
-- https://github.com/kingsleyh/DLanguage
-- https://github.com/dlang/visuald/releases
-
-
 ## Java
 - https://dzone.com/articles/bigdecimal-gotchas?edition=179484&utm_source=Spotlight&utm_medium=email&utm_campaign=big%20data%202016-05-26
 - https://github.com/artyushov/idea-jmh-plugin

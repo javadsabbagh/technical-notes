@@ -6,7 +6,7 @@
 * http://dynamicfsm.blogspot.com/2014/04/finite-state-machine-and-its-java.html
 * https://www.quora.com/What-are-the-best-Java-libraries-for-the-implementation-of-Finite-State-Machines
 	
-## Secure Rest:
+## Securing Rest:
 - http://docs.oracle.com/middleware/1213/wls/RESTF/secure-restful-service.htm#RESTF286
 - http://stackoverflow.com/questions/8955909/how-to-secure-a-rest-web-service-in-java-ee-6
 
@@ -115,3 +115,12 @@ Some useful informaion on stackoverflow
 		
 ### System Resources Monitoring	
 - [SIGAR](https://support.hyperic.com/display/SIGAR/Home)
+
+
+## JVM Languages
+
+* [List of JVM languages](https://en.wikipedia.org/wiki/List_of_JVM_languages)
+* [JIProlog: Prolog runs on JVM release download](https://github.com/jiprolog/jiprolog/releases)
+
+* [List of CLI languages: languages run on .Net Framework](https://en.wikipedia.org/wiki/List_of_CLI_languages)
+

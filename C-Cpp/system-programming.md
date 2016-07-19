@@ -25,6 +25,14 @@
 - [Mastering Concurrency in Go](http://www.learnr.pro/view/book/61517-mastering-concurrency-in-go#1533179824:70939.711899852)
 
 
+## D Language Resources
+- https://dlang.org/ctarguments.html
+- http://tour.dlang.org/tour/basics/14
+- https://wiki.dlang.org/Books
+- https://github.com/kingsleyh/DLanguage
+- https://github.com/dlang/visuald/releases
+
+
 ### Modern C++ Books
 
 #### C++ Recipes
