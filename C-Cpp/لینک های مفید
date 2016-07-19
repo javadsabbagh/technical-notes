@@ -18,18 +18,6 @@ jBPM Users Guide
 Boootstrap
 	http://www.tutorialspoint.com/bootstrap/bootstrap_environment_setup.htm
 
-C/C++/Emacs
-	http://invisible-island.net/cdk/
-	http://tuhdo.github.io/emacs-tutor.html
-	http://tuhdo.github.io/c-ide.html
-	https://truongtx.me/2013/03/10/ecb-emacs-code-browser/
-	http://stackoverflow.com/questions/15282233/emacs-as-an-ide-for-large-c-projects
-	http://cedet.sourceforge.net/
-	http://jdee.sourceforge.net/
-	http://alexott.net/en/writings/emacs-vcs/EmacsGit.html
-	http://alexott.net/en/writings/emacs-devenv/EmacsCedet.html
-	https://github.com/alexott
-
 
 Functional Programming:		
 	http://alexott.net/en/fp/
@@ -39,22 +27,6 @@ Functional Programming:
 Math:
 	http://www.math.com/students/wonders/life/life.html
 	http://www.math.com/students/wonders/fractals.html
-
-Embedded Linux:
-	https://en.wikipedia.org/wiki/Yocto_Project
-	https://www.yoctoproject.org/downloads
-
-Java
-	https://support.hyperic.com/display/SIGAR/Home
-
-
-ECB
-JDEE
-CEDET
-
-
-
-http://askubuntu.com/questions/625536/fdisk-sector-size-and-alignment-issues
 
 
 

@@ -21,3 +21,6 @@ ORB: NEW GENERATION OF LINUX APPS ARE HERE  (Portable Apps for Ubuntu: ORB & Sup
 - http://www.programcreek.com/2011/02/linux-shelling-programming-warm-up-example/
 - http://www.programcreek.com/2011/02/linux-pipe-for-communication-between-java-and-c-program/
 - http://www.programcreek.com/2014/01/linux-shell-script-read-file-line-by-line/
+
+
+- http://askubuntu.com/questions/625536/fdisk-sector-size-and-alignment-issues

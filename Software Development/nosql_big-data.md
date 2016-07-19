@@ -16,6 +16,8 @@
 - [Open MPI](http://www.aosabook.org/en/openmpi.html)
 - [Telepathy](http://www.aosabook.org/en/telepathy.html)
 - [A Web Crawler With asyncio Coroutines](http://www.aosabook.org/en/500L/a-web-crawler-with-asyncio-coroutines.html)
+- [Mesos in Action](http://www.allitebooks.com/mesos-in-action/)
+- [Professional CUDA C Programming](http://www.allitebooks.com/professional-cuda-c-programming/)
 
 ## Apache Kafka
 - https://en.wikipedia.org/wiki/Apache_Kafka
