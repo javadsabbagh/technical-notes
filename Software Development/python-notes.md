@@ -32,9 +32,7 @@
 | <img width="100" height="100" alt="cover image" src="">  |  [Python Cookbook, 3rd Edition]() |
 | <img width="100" height="100" alt="cover image" src="">  |  [Programming Python, 4th Edition]() |
 | <img width="100" height="100" alt="cover image" src="">  |  [Python Network Programming Cookbook]() |
-| <img width="100" height="100" alt="cover image" src="">  |  [Getting Started with Beautiful Soup]()
-	- [Beautiful Soup : HTML Parser](https://www.crummy.com/software/BeautifulSoup/)
-	- [Beautiful Soup Documentation](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) |
+| <img width="100" height="100" alt="cover image" src="">  |  [Getting Started with Beautiful Soup]() |	
 | <img width="100" height="100" alt="cover image" src="">  |  [Mastering Python]() |
 | <img width="100" height="100" alt="cover image" src="">  |  [Python High Performance Programming]() |
 | <img width="100" height="100" alt="cover image" src="">  |  [Learning scikit-learn: Machine Learning in Python]() |
@@ -43,6 +41,9 @@
 | <img width="100" height="100" alt="cover image" src="">  |  [Fluent Python]() |
 | <img width="100" height="100" alt="cover image" src="">  |  [CherryPy Essentials: Web Server of TurboGrears]() |
 | <img width="100" height="100" alt="cover image" src="">  |  [Python 3 Web Development]() |
+
+- [Beautiful Soup : HTML Parser](https://www.crummy.com/software/BeautifulSoup/)
+- [Beautiful Soup Documentation](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
 
 
 ----------

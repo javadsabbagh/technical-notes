@@ -29,6 +29,10 @@ A jar file consists graphiti source and lots of samples!
 - https://eclipse.org/articles/Article-GEF-diagram-editor/shape.html
 - http://www.eclipse.org/articles/Article-GEF-Draw2d/GEF-Draw2d.html
 
+### A Comprehensive Tutorial Series on GEF
+* https://www.vainolo.com/tutorials/gef-tutorials/
+* [Author's Github Page](https://github.com/vainolo)
+
 
 ## Eclipse RCP
 
@@ -67,4 +71,11 @@ A jar file consists graphiti source and lots of samples!
 
 - http://www.eclipse.org/articles/article.php?file=Article-Swing-SWT-Integration/index.html
 - http://www.eclipse.org/sirius/gallery.html
+
+## java2s.com
+java2s.com has a lot of SWT/JFace samples:
+* http://www.java2s.com/Code/Java/SWT-JFace-Eclipse/CatalogSWT-JFace-Eclipse.htm
+* http://www.java2s.com/Code/Java/SWT-JFace-Eclipse/HelloWorldDisplay.htm
+
+It also has a lot of samples in other categories which woth reading!
 

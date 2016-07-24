@@ -1,5 +1,35 @@
 # Git Tutorials - Pro Git
 
+## Github REST API
+https://developer.github.com/v3/
+
+
+## Forking Projects
+* [All notes about forking others projects](https://guides.github.com/activities/forking/)
+* [Syncing a fork](https://help.github.com/articles/syncing-a-fork/)
+
+Keeping a fork up to date:
+1. Clone your fork:
+
+```sh
+git clone git@github.com:YOUR-USERNAME/YOUR-FORKED-REPO.git
+```
+
+2. Add remote from original repository in your forked repository:
+
+```sh
+cd into/cloned/fork-repo
+git remote add upstream git://github.com/ORIGINAL-DEV-USERNAME/REPO-YOU-FORKED-FROM.git
+git fetch upstream
+```
+
+3. Updating your fork from original repo to keep up with their changes:
+
+```sh
+git pull upstream master
+```
+
+
 ## Git Configuration
 ```sh
 git config --global user.name   "your user name"
