@@ -1,0 +1,796 @@
+Solaris Notes
+------------------------------------------------
+
+From book: Solaris 10: The Complete Reference
+
+One of the appealing characteristics of Solaris and other UNIX-like systems is that
+applications can execute (or spawn) other applications
+
+each PID is related to a user identifier (UID) and to that user’s group identifier (GID)
+
+An application, such as a shell, can spawn another application by using the system
+call system() in a C program. This is expensive performance-wise, however, because
+a new shell process is spawned in addition to the target application. An alternative is to
+use the fork() system call, which spawns child processes directly, with applications
+executed using exec(). Each child process is linked back to its parent process: if the
+parent process exits, the parent process automatically reverts to PID 1, which exits
+when the system is shut down or rebooted.
+
+
+ps –eaf
+
+
+
+client 1% httpd
+^z
+Suspended
+client 2% bg
+[1] httpd&
+client 3% ls
+httpd.conf access.conf srm.conf
+client 4% fg
+
+
+
+# kill -1 167
+The –1 parameter stands for the SIGHUP signal, which means “hang up.”
+
+
+# kill -9 167
+
+$ kill -l
+HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE
+ALRM TERM USR1 USR2 CLD PWR WINCH URG POLL STOP TSTP CONT
+TTIN TTOU VTALRM PROF XCPU XFSZ WAITING LWP FREEZE THAW
+RTMIN RTMIN+1 RTMIN+2 RTMIN+3 RTMAX-3 RTMAX-2 RTMAX-1
+RTMAX
+
+
+$ ps
+PID TTY TIME CMD
+29081 pts/8 0:00 ksh
+
+
+$ ps -f
+UID PID PPID C STIME TTY TIME CMD
+pwatters 29081 29079 0 10:40:30 pts/8 0:00 /bin/ksh
+
+
+
+$ ps -l
+F S UID PID PPID C PRI NI ADDR SZ WCHAN TTY TIME CMD
+8 S 6049 29081 29079 0 51 20 e11b4830 372 e11b489c pts/8 0:00 ksh
+8 R 6049 29085 29081 0 51 20 e101b0d0 512 pts/8 0:00 bash
+
+Here, you can see the following:
+• The flags (F) associated with the processes
+• The state (S) of the processes (29081 is sleeping, S, 29085 is running, R)
+• The process identifier (29081 and 29085)
+• Parent process identifier (29079 and 29081)
+• Processor utilization (deprecated)
+• Process priority (PRI), which is 51
+• Nice value (NI), which is 20
+• Memory address (ADDR), which is expressed in hex (e11b4830 and e101b0d0)
+• Size (SZ), in kilobytes, which is 372KB and 512KB
+• The memory address for sleeping process events (WCHAN), which is e11b489c
+for PID 29081
+• CPU time used (TIME)
+• The command executed (CMD)
+
+
+
+# ps -A
+PID TTY TIME CMD
+0 ? 0:00 sched
+1 ? 0:01 init
+2 ? 0:01 pageout
+3 ? 9:49 fsflush
+258 ? 0:00 ttymon
+108 ? 0:00 rpcbind
+255 ? 0:00 sac
+60 ? 0:00 devfseve
+62 ? 0:00 devfsadm
+157 ? 0:03 automount
+110 ? 0:01 keyserv
+112 ? 0:04 nis_cache
+165 ? 0:00 syslogd
+
+
+
+# ps -Af
+UID PID PPID C STIME TTY TIME CMD
+root 0 0 0 Mar 20 ? 0:00 sched
+root 1 0 0 Mar 20 ? 0:01 /etc/init -
+root 2 0 0 Mar 20 ? 0:01 pageout
+root 3 0 0 Mar 20 ? 9:51 fsflush
+root 258 255 0 Mar 20 ? 0:00 /usr/lib/saf/ttymon
+root 108 1 0 Mar 20 ? 0:00 /usr/sbin/rpcbind
+root 255 1 0 Mar 20 ? 0:00 /usr/lib/saf/sac -t 300
+root 60 1 0 Mar 20 ? 0:00 /usr/lib/devfsadm/devfseventd
+root 62 1 0 Mar 20 ? 0:00 /usr/lib/devfsadm/devfsadmd
+root 157 1 0 Mar 20 ? 0:03 /usr/lib/autofs/automountd
+root 110 1 0 Mar 20 ? 0:01 /usr/sbin/keyserv
+root 112 1 0 Mar 20 ? 0:05 /usr/sbin/nis_cachemgr
+root 165 1 0 Mar 20 ? 0:00 /usr/sbin/syslogd
+
+
+% ps -c
+PID CLS PRI TTY TIME CMD
+29081 TS 48 pts/8 0:00 ksh
+29085 TS 48 pts/8 0:00 bash
+
+
+# priocntl -l
+CONFIGURED CLASSES
+==================
+SYS (System Class)
+TS (Time Sharing)
+Configured TS User Priority Range: -60 through 60
+IA (Interactive)
+Configured IA User Priority Range: -60 through 60
+FX (Fixed priority)
+Configured FX User Priority Range: 0 through 60
+
+
+$ ps -cf
+UID PID PPID CLS PRI STIME TTY TIME CMD
+paul 29081 29079 TS 48 10:40:30 pts/8 0:00 /bin/ksh
+paul 29085 29081 TS 48 10:40:51 pts/8 0:00 /usr/local/bin/bash
+
+
+$ ps -g 0
+PID TTY TIME CMD
+0 ? 0:00 sched
+1 ? 0:01 init
+2 ? 0:01 pageout
+3 ? 9:51 fsflush
+
+
+$ ps -j
+PID PGID SID TTY TIME CMD
+29081 29081 29081 pts/8 0:00 ksh
+29085 29085 29081 pts/8 0:00 bash
+
+
+$ ps -L
+PID LWP TTY LTIME CMD
+29081 1 pts/8 0:00 ksh
+29085 1 pts/8 0:00 bash
+
+
+
+ftp://ftp.groupsys.com/pub/top
+
+
+# nice -–20 dtterm
+
+
+$ find . -name apache -print
+
+
+# ps -eaf | grep pwatters
+pwatters 310 291 0 Mar 20 ? 0:04 /usr/openwin/bin/Xsun
+pwatters 11959 11934 0 09:21:42 pts/1 0:00 grep pwatters
+pwatters 11934 11932 1 09:20:50 pts/1 0:00 –ksh
+
+
+
+# cd /proc/11934
+# ls -l
+total 3497
+-rw------- 1 pwatters other 1769472 Mar 30 09:20 as
+-r-------- 1 pwatters other 152 Mar 30 09:20 auxv
+-r-------- 1 pwatters other 32 Mar 30 09:20 cred
+--w------- 1 pwatters other 0 Mar 30 09:20 ctl
+lr-x------ 1 pwatters other 0 Mar 30 09:20 cwd ->
+dr-x------ 2 pwatters other 1184 Mar 30 09:20 fd
+-r--r--r-- 1 pwatters other 120 Mar 30 09:20 lpsinfo
+-r-------- 1 pwatters other 912 Mar 30 09:20 lstatus
+-r--r--r-- 1 pwatters other 536 Mar 30 09:20 lusage
+dr-xr-xr-x 3 pwatters other 48 Mar 30 09:20 lwp
+-r-------- 1 pwatters other 2016 Mar 30 09:20 map
+dr-x------ 2 pwatters other 544 Mar 30 09:20 object
+-r-------- 1 pwatters other 2552 Mar 30 09:20 pagedata
+-r--r--r-- 1 pwatters other 336 Mar 30 09:20 psinfo
+-r-------- 1 pwatters other 2016 Mar 30 09:20 rmap
+lr-x------ 1 pwatters other 0 Mar 30 09:20 root ->
+-r-------- 1 pwatters other 1440 Mar 30 09:20 sigact
+-r-------- 1 pwatters other 1232 Mar 30 09:20 status
+-r--r--r-- 1 pwatters other 256 Mar 30 09:20 usage
+-r-------- 1 pwatters other 0 Mar 30 09:20 watch
+-r-------- 1 pwatters other 3192 Mar 30 09:20 xmap
+
+
+# /usr/proc/bin/pflags 29081
+29081: /bin/ksh
+data model = _ILP32 flags = PR_ORPHAN
+/1: flags = PR_PCINVAL|PR_ASLEEP [ waitid(0x7,0x0,0x804714c,0x7) ]
+
+
+
+$ /usr/proc/bin/pcred 29081
+29081: e/r/sUID=100 e/r/sGID=10
+
+
+
+# /usr/proc/bin/pmap 29081
+29081: /bin/ksh
+08046000 8K read/write/exec [ stack ]
+08048000 160K read/exec /usr/bin/ksh
+08070000 8K read/write/exec /usr/bin/ksh
+08072000 28K read/write/exec [ heap ]
+DFAB4000 16K read/exec /usr/lib/locale/en_AU/en_AU.so.2
+DFAB8000 8K read/write/exec /usr/lib/locale/en_AU/en_AU.so.2
+DFABB000 4K read/write/exec [ anon ]
+DFABD000 12K read/exec /usr/lib/libmp.so.2
+DFAC0000 4K read/write/exec /usr/lib/libmp.so.2
+DFAC4000 552K read/exec /usr/lib/libc.so.1
+DFB4E000 24K read/write/exec /usr/lib/libc.so.1
+DFB54000 8K read/write/exec [ anon ]
+DFB57000 444K read/exec /usr/lib/libnsl.so.1
+DFBC6000 20K read/write/exec /usr/lib/libnsl.so.1
+DFBCB000 32K read/write/exec [ anon ]
+DFBD4000 32K read/exec /usr/lib/libsocket.so.1
+DFBDC000 8K read/write/exec /usr/lib/libsocket.so.1
+DFBDF000 4K read/exec /usr/lib/libdl.so.1
+DFBE1000 4K read/write/exec [ anon ]
+DFBE3000 100K read/exec /usr/lib/ld.so.1
+DFBFC000 12K read/write/exec /usr/lib/ld.so.1
+total 1488K
+
+
+
+# /usr/proc/bin/pldd 29081
+29081: /bin/ksh
+/usr/lib/libsocket.so.1
+/usr/lib/libnsl.so.1
+/usr/lib/libc.so.1
+/usr/lib/libdl.so.1
+/usr/lib/libmp.so.2
+/usr/lib/locale/en_AU/en_AU.so.2
+
+
+$ /usr/proc/bin/psig 29081
+29081: /bin/ksh
+HUP caught RESTART
+INT caught RESTART
+QUIT ignored
+ILL caught RESTART
+TRAP caught RESTART
+ABRT caught RESTART
+EMT caught RESTART
+FPE caught RESTART
+KILL default
+BUS caught RESTART
+SEGV default
+SYS caught RESTART
+PIPE caught RESTART
+ALRM caught RESTART
+TERM ignored
+USR1 caught RESTART
+USR2 caught RESTART
+CLD default NOCLDSTOP
+PWR default
+WINCH default
+URG default
+POLL default
+STOP default
+TSTP ignored
+CONT default
+TTIN ignored
+TTOU ignored
+VTALRM default
+PROF default
+XCPU caught RESTART
+XFSZ ignored
+WAITING default
+LWP default
+FREEZE default
+THAW default
+CANCEL default
+LOST default
+RTMIN default
+RTMIN+1 default
+RTMIN+2 default
+RTMIN+3 default
+RTMAX-3 default
+RTMAX-2 default
+RTMAX-1 default
+RTMAX default
+
+
+
+$ /usr/proc/bin/pstack 29081
+29081: /bin/ksh
+dfaf5347 waitid (7, 0, 804714c, 7)
+dfb0d9db _waitPID (ffffffff, 8047224, 4) + 63
+dfb40617 waitPID (ffffffff, 8047224, 4) + 1f
+0805b792 job_wait (719d) + 1ae
+08064be8 sh_exec (8077270, 14) + af0
+0805e3a1 ???????? ()
+0805decd main (1, 8047624, 804762c) + 705
+0804fa78 ???????? ()
+
+
+$ /usr/proc/bin/pfiles 29081
+29081: /bin/ksh
+Current rlimit: 64 file descriptors
+0: S_IFCHR mode:0620 dev:102,0 ino:319009 UID:6049 GID:7 rdev:24,8
+O_RDWR|O_LARGEFILE
+1: S_IFCHR mode:0620 dev:102,0 ino:319009 UID:6049 GID:7 rdev:24,8
+O_RDWR|O_LARGEFILE
+2: S_IFCHR mode:0620 dev:102,0 ino:319009 UID:6049 GID:7 rdev:24,8
+O_RDWR|O_LARGEFILE
+63: S_IFREG mode:0600 dev:174,2 ino:990890 UID:6049 GID:1 size:3210
+O_RDWR|O_APPEND|O_LARGEFILE FD_CLOEXEC
+
+
+
+$ /usr/proc/bin/pwdx 29081
+29081: /home/paul
+
+
+
+$ /usr/proc/bin/ptree 29081
+247 /usr/dt/bin/dtlogin -daemon
+28950 /usr/dt/bin/dtlogin -daemon
+28972 /bin/ksh /usr/dt/bin/Xsession
+29012 /usr/dt/bin/sdt_shell -c unset DT; DISPLAY=lion:0;
+29015 ksh -c unset DT; DISPLAY=lion:0;
+/usr/dt/bin/dt
+29026 /usr/dt/bin/dtsession
+29032 dtwm
+29079 /usr/dt/bin/dtterm
+29081 /bin/ksh
+29085 /usr/local/bin/bash
+29230 /usr/proc/bin/ptree 29081
+
+
+
+$ lsof /tmp
+COMMAND PID USER FD TYPE DEVICE SIZE/OFF NODE NAME
+ssion 338 pwatters txt VREG 0,1 271596 471638794 /tmp (swap)
+(unknown) 345 pwatters txt VREG 0,1 271596 471638794 /tmp (swap)
+le 2295 pwatters txt VREG 0,1 271596 471638794 /tmp (swap)
+le 2299 pwatters txt VREG 0,1 271596 471638794 /tmp (swap)
+
+
+
+
+# lsof /
+COMMAND PID USER FD TYPE DEVICE SIZE/OFF NODE NAME
+(unknown) 1 root txt VREG 102,0 446144 118299 / (/dev/dsk/c0d0s0)
+(unknown) 1 root txt VREG 102,0 4372 293504 / (/dev/dsk/c0d0s0)
+(unknown) 1 root txt VREG 102,0 173272 293503 / (/dev/dsk/c0d0s0)
+sadm 62 root txt VREG 102,0 954804 101535 / (/dev/dsk/c0d0s0)
+sadm 62 root txt VREG 102,0 165948 101569 / (/dev/dsk/c0d0s0)
+sadm 62 root txt VREG 102,0 16132 100766 / (/dev/dsk/c0d0s0)
+sadm 62 root txt VREG 102,0 8772 100765 / (/dev/dsk/c0d0s0)
+sadm 62 root txt VREG 102,0 142652 101571 / (/dev/dsk/c0d0s0)
+
+
+
+$ df -k
+Filesystem kbytes used avail capacity Mounted on
+/proc 0 0 0 0% /proc
+/dev/dsk/c0d0s0 2510214 929292 1530718 38% /
+fd 0 0 0 0% /dev/fd
+/dev/dsk/c0d0s3 5347552 183471 5110606 4% /usr/local
+swap 185524 12120 173404 7% /tmp
+
+
+
+$ lsof /dev/dsk/c0d0s3
+COMMAND PID USER FD TYPE DEVICE SIZE/OFF NODE NAME
+postgres 423 pwatters txt VREG 102,3 1747168 457895 /usr/local (/dev/dsk/
+c0d0s3)
+d 4905 root txt VREG 102,3 333692 56455 /usr/local (/dev/dsk/c0d0s3)
+d 4906 nobody txt VREG 102,3 333692 56455 /usr/local (/dev/dsk/c0d0s3)
+d 4907 nobody txt VREG 102,3 333692 56455 /usr/local (/dev/dsk/c0d0s3)
+d 4908 nobody txt VREG 102,3 333692 56455 /usr/local (/dev/dsk/c0d0s3)
+d 4909 nobody txt VREG 102,3 333692 56455 /usr/local (/dev/dsk/c0d0s3)
+d 4910 nobody txt VREG 102,3 333692 56455 /usr/local (/dev/dsk/c0d0s3)
+d 4911 nobody txt VREG 102,3 333692 56455 /usr/local (/dev/dsk/c0d0s3)
+d 4912 nobody txt VREG 102,3 333692 56455 /usr/local (/dev/dsk/c0d0s3)
+d 4913 nobody txt VREG 102,3 333692 56455 /usr/local (/dev/dsk/c0d0s3)
+
+
+
+
+$ ps -eaf | grep apache
+nobody 4911 4905 0 Mar 22 ? 0:00 /usr/local/apache/bin/httpd
+nobody 4910 4905 0 Mar 22 ? 0:00 /usr/local/apache/bin/httpd
+nobody 4912 4905 0 Mar 22 ? 0:00 /usr/local/apache/bin/httpd
+nobody 4905 1 0 Mar 22 ? 0:00 /usr/local/apache/bin/httpd
+nobody 4907 4905 0 Mar 22 ? 0:00 /usr/local/apache/bin/httpd
+nobody 4908 4905 0 Mar 22 ? 0:00 /usr/local/apache/bin/httpd
+nobody 4913 4905 0 Mar 22 ? 0:00 /usr/local/apache/bin/httpd
+nobody 4909 4905 0 Mar 22 ? 0:00 /usr/local/apache/bin/httpd
+nobody 4906 4905 0 Mar 22 ? 0:00 /usr/local/apache/bin/httpd
+
+
+
+$ lsof -p 4905
+COMMAND PID USER FD TYPE DEVICE SIZE/OFF NODE NAME
+d 4905 nobody txt VREG 102,3 333692 56455 /usr/local
+(/dev/dsk/c0d0s3)
+d 4905 nobody txt VREG 102,0 17388 100789 / (/dev/dsk/c0d0s0)
+d 4905 nobody txt VREG 102,0 954804 101535 / (/dev/dsk/c0d0s0)
+d 4905 nobody txt VREG 102,0 693900 101573 / (/dev/dsk/c0d0s0)
+d 4905 nobody txt VREG 102,0 52988 100807 / (/dev/dsk/c0d0s0)
+d 4905 nobody txt VREG 102,0 4396 100752 / (/dev/dsk/c0d0s0)
+d 4905 nobody txt VREG 102,0 175736 100804 / (/dev/dsk/c0d0s0)
+
+
+
+ps
+The following table summarizes the main options used with ps.
+Option Description
+–a Lists most frequently requested processes
+–A, –e List all processes
+–c Lists processes in scheduler format
+–d Lists all processes
+–f Prints comprehensive process information
+–g Prints process information on a group basis for a single group
+–G Prints process information on a group basis for a list of groups
+–j Includes SID and PGID in printout
+–l Prints complete process information
+–L Displays LWP details
+–p Lists process details for list of specified processes
+–P Lists the CPU ID to which a process is bound
+–s Lists session leaders
+–t Lists all processes associated with a specific terminal
+–u Lists all processes for a specific user
+
+
+
+$ kill –9 `pgrep java`
+
+
+$ pkill –9 java
+
+
+The killall command is used to kill all processes running on a system. It is called by
+shutdown when the system is being bought to run-level 0. However, since a signal can
+be passed to the killall command, it is possible for a superuser to send a different
+signal (other than 9) to all processes. For example, to send a SIGHUP signal to all
+processes, the following command could be used:
+# killall 1
+
+
+
+
+# netstat
+
+/etc/hostname.hmen
+/etc/hostname.len
+
+
+
+A sample /etc/hosts file is shown here:
+127.0.0.1 localhost
+192.68.16.1 emu emu.cassowary.net
+192.68.16.2 hawk hawk.cassowary.net loghost
+192.68.16.3 eagle eagle.cassowary.net
+
+
+
+
+# ifconfig -a
+lo0: flags=849<UP,LOOPBACK,RUNNING,MULTICAST> mtu 8232
+inet 127.0.0.1 netmask ff000000
+hme0: flags=863<UP,BROADCAST,NOTRAILERS,RUNNING,MULTICAST> mtu 1500
+inet 10.17.65.16 netmask ffffff00 broadcast 10.17.65.255
+hme1: flags=863<UP,BROADCAST,NOTRAILERS,RUNNING,MULTICAST> mtu 1500
+inet 204.17.65.16 netmask ffffff00 broadcast 204.17.65.255
+
+
+
+# ifconfig hme1
+hme1: flags=863<DOWN,BROADCAST,NOTRAILERS,RUNNING,MULTICAST>
+mtu 1500 inet 204.17.64.16 netmask ffffff00 broadcast
+204.17.64.255
+
+
+# arp -a
+Net to Media Table
+Device IP Address Mask Flags Phys Addr
+------ -------------------- --------------- ---- -----------------
+hme0 server1.cassowary.net 255.255.255.255 00:c0:ff:19:48:d8
+hme0 server2.cassowary.net 255.255.255.255 c2:d4:78:00:15:56
+hme0 server3.cassowary.net 255.255.255.255 87:b3:9a:c2:e9:ea
+
+
+# ifconfig hme1 down
+# ifconfig hme1
+hme1: flags=863<DOWN,BROADCAST,NOTRAILERS,RUNNING,MULTICAST>
+mtu 1500 inet 204.17.64.16 netmask ffffff00
+broadcast 204.17.64.255
+
+
+# ifconfig hme1 up
+# ifconfig hme1
+hme1: flags=863<UP,BROADCAST,NOTRAILERS,RUNNING,MULTICAST>
+mtu 1500 inet 204.17.64.16 netmask ffffff00
+broadcast 204.17.64.255
+
+
+
+# ndd -set /dev/tcp tcp_close_wait_interval 30000
+
+A service definition in /etc/inetd.conf has the following format:
+service socket protocol flags user server_name arguments
+
+talk dgram udp wait root /usr/sbin/in.talkd in.talkd
+
+#talk dgram udp wait root /usr/sbin/in.talkd in.talkd
+
+# ps -eaf | grep inetd
+root 206 1 0 May 16 ? 30:19 /usr/sbin/inetd -s
+
+To restart the process, the following command would be used:
+kill -1 206
+
+
+tcpmux 1/tcp
+echo 7/tcp
+echo 7/udp
+discard 9/tcp sink null
+discard 9/udp sink null
+systat 11/tcp users
+daytime 13/tcp
+
+
+#finger 79/tcp
+
+
+A sample /etc/inetd.conf file is shown here:
+ftp stream tcp nowait root /usr/sbin/in.ftpd in.ftpd -l
+telnet stream tcp nowait root /usr/sbin/in.telnetd in.telnetd
+name dgram udp wait root /usr/sbin/in.tnamed in.tnamed
+shell stream tcp nowait root /usr/sbin/in.rshd in.rshd
+login stream tcp nowait root /usr/sbin/in.rlogind in.rlogind
+exec stream tcp nowait root /usr/sbin/in.rexecd in.rexecd
+comsat dgram udp wait root /usr/sbin/in.comsat in.comsat
+talk dgram udp wait root /usr/sbin/in.talkd in.talkd
+uucp stream tcp nowait root /usr/sbin/in.uucpd in.uucpd
+tftp dgram udp wait root /usr/sbin/in.tftpd in.tftpd -s
+/tftpboot
+finger stream tcp nowait nobody /usr/sbin/in.fingerd in.fingerd
+systat stream tcp nowait root /usr/bin/ps ps -ef
+netstat stream tcp nowait root /usr/bin/netstat netstat -f inet
+
+
+
+$ talk shusaku@users.cassowary.net
+
+
+$ talk shusaku@users.cassowary.net
+
+
+#finger stream tcp nowait nobody /usr/sbin/in.fingerd in.fingerd
+
+/etc/inetd.conf
+A sample inetd.conf file is shown next. It contains entries for the most commonly used
+Internet services.
+ftp stream tcp nowait root /usr/sbin/in.ftpd in.ftpd -l
+telnet stream tcp nowait root /usr/sbin/in.telnetd in.telnetd
+name dgram udp wait root /usr/sbin/in.tnamed in.tnamed
+shell stream tcp nowait root /usr/sbin/in.rshd in.rshd
+login stream tcp nowait root /usr/sbin/in.rlogind in.rlogind
+exec stream tcp nowait root /usr/sbin/in.rexecd in.rexecd
+comsat dgram udp wait root /usr/sbin/in.comsat in.comsat
+talk dgram udp wait root /usr/sbin/in.talkd in.talkd
+uucp stream tcp nowait root /usr/sbin/in.uucpd in.uucpd
+
+Some of these services are described here:
+• fingerd Checks to see who is logged into a system
+• rdisc Allows routes to be discovered on the network
+• rexecd Permits commands to be executed remotely
+• rlogind Allows a remote login to another server
+• rshd Spawns a shell on a remote system
+• rwhod Checks to see who is running processes
+• telnetd Connects to a remote host
+• tftpd Supports Trivial FTP for diskless clients
+• uucpd Implements the UNIX-to-UNIX Copy Program
+• pcmciad Manages PCMCIA operations
+• rstatd Allows system resources to be monitored remotely
+• rwalld Permits a message to be written to all logged-in users on a network
+• statd Allows system resources to be monitored locally
+• syslogd Configurable system log
+• talkd Allows remote users to chat in real time
+
+
+
+/etc/services
+Many inetd services must be mapped to a specific port number: a sample /etc/services
+file, shown next, defines port numbers for most of the commonly used services:
+tcpmux 1/tcp
+echo 7/tcp
+echo 7/udp
+discard 9/tcp sink null
+discard 9/udp sink null
+systat 11/tcp users
+daytime 13/tcp
+daytime 13/udp
+netstat 15/tcp
+
+
+
+$ traceroute www.sun.com
+Tracing route to wwwwseast.usec.sun.com [192.9.49.30]
+over a maximum of 30 hops:
+1 184 ms 142 ms 138 ms 202.10.4.131
+2 147 ms 144 ms 138 ms 202.10.4.129
+3 150 ms 142 ms 144 ms 202.10.1.73
+4 150 ms 144 ms 141 ms atm11-0-0-11.ia4.optus.net.au
+[202.139.32.17]
+5 148 ms 143 ms 139 ms 202.139.1.197
+6 490 ms 489 ms 474 ms hssi9-0-0.sf1.optus.net.au
+[192.65.89.246]
+7 526 ms 480 ms 485 ms g-sfd-br-02-f12-0.gn.cwix.net
+[207.124.109.57]
+8 494 ms 482 ms 485 ms core7-hssi6-0-0.SanFrancisco.cw.net
+[204.70.10.9]
+9 483 ms 489 ms 484 ms corerouter2.SanFrancisco.cw.net
+[204.70.9.132]
+10 557 ms 552 ms 561 ms xcore3.Boston.cw.net [204.70.150.81]
+11 566 ms 572 ms 554 ms sun-micro-system.Boston.cw.net
+[204.70.179.102]
+12 577 ms 574 ms 558 ms wwwwseast.usec.sun.com [192.9.49.30]
+Trace complete.
+
+
+arp
+You can check the table of IP address–to–MAC address mappings by using the arp
+command:
+$ arp –a
+Net to Media Table
+Device IP Address Mask Flags Phys Addr
+------ ---------------------- --------------- ----- ---------------
+hme0 www.cassowary.net 255.255.255.255 00:19:cd:e3:05:a3
+hme0 mail.cassowary.net 255.255.255.255 08:11:92:a4:12:ee
+hme0 ftp.cassowary.net 255.255.255.255 SP 08:12:4e:4d:55:a2
+hme0 BASE-ADDRESS.MCAST.NET 240.0.0.0 SM 01:01:4e:00:00:00
+
+
+$ arp mail
+mail (204.67.34.12) at 08:11:92:a4:12:ee
+
+
+
+snoop
+Packet interception is performed by the snoop application, which reads raw packet
+data from a network interface operating in promiscuous mode. The following example
+shows ETHER (Link), IP (Network), TCP (Transport), and Telnet (Application) sections,
+respectively:
+# snoop -v tcp port 23
+Using device /dev/hme0 (promiscuous mode)
+ETHER: ----- Ether Header -----
+ETHER:
+ETHER: Packet 1 arrived at 14:13:22.14
+ETHER: Packet size = 60 bytes
+ETHER: Destination = 1:58:4:16:8a:34,
+ETHER: Source = 2:60:5:12:6b:35, Sun
+ETHER: Ethertype = 0800 (IP)
+ETHER:
+IP: ----- IP Header -----
+IP:
+IP: Version = 4
+IP: Header length = 20 bytes
+IP: Type of service = 0x00
+IP: xxx. .... = 0 (precedence)
+IP: ...0 .... = normal delay
+IP: .... 0... = normal throughput
+IP: .... .0.. = normal reliability
+IP: Total length = 40 bytes
+IP: Identification = 46864
+IP: Flags = 0x4
+IP: .1.. .... = do not fragment
+IP: ..0. .... = last fragment
+IP: Fragment offset = 0 bytes
+IP: Time to live = 255 seconds/hops
+IP: Protocol = 6 (TCP)
+IP: Header checksum = 11a9
+IP: Source address = 64.23.168.76, moppet.paulwatters.com
+IP: Destination address = 64.23.168.48, miki.paulwatters.com
+IP: No options
+IP:
+TCP: ----- TCP Header -----
+TCP:
+TCP: Source port = 62421
+TCP: Destination port = 23 (TELNET)
+TCP: Sequence number = 796159562
+TCP: Acknowledgement number = 105859685
+TCP: Data offset = 20 bytes
+TCP: Flags = 0x10
+TCP: ..0. .... = No urgent pointer
+TCP: ...1 .... = Acknowledgement
+TCP: .... 0... = No push
+TCP: .... .0.. = No reset
+TCP: .... ..0. = No Syn
+TCP: .... ...0 = No Fin
+TCP: Window = 8760
+TCP: Checksum = 0x8f8f
+TCP: Urgent pointer = 0
+TCP: No options
+TCP:
+TELNET: ----- TELNET: -----
+TELNET:
+TELNET: "a"
+TELNET:
+
+
+
+ndd
+ndd is used to set parameters for network protocols, including TCP, IP, UDP, and ARP.
+It can be used to modify the parameters associated with IP forwarding and routing.
+For example, take a look at the set of configurable parameters for TCP transmission:
+server# ndd /dev/tcp \?
+? (read only)
+tcp_close_wait_interval (read and write)
+tcp_conn_req_max_q (read and write)
+tcp_conn_req_max_q0 (read and write)
+tcp_conn_req_min (read and write)
+tcp_conn_grace_period (read and write)
+tcp_cwnd_max (read and write)
+tcp_debug (read and write)
+tcp_smallest_nonpriv_port (read and write)
+tcp_ip_abort_cinterval (read and write)
+tcp_ip_abort_linterval (read and write)
+tcp_ip_abort_interval (read and write)
+tcp_ip_notify_cinterval (read and write)
+tcp_ip_notify_interval (read and write)
+tcp_ip_ttl (read and write)
+tcp_keepalive_interval (read and write)
+tcp_maxpsz_multiplier (read and write)
+tcp_mss_def (read and write)
+tcp_mss_max (read and write)
+tcp_mss_min (read and write)
+tcp_naglim_def (read and write)
+tcp_rexmit_interval_initial (read and write)
+tcp_rexmit_interval_max (read and write)
+tcp_rexmit_interval_min (read and write)
+tcp_wroff_xtra (read and write)
+tcp_deferred_ack_interval (read and write)
+tcp_snd_lowat_fraction (read and write)
+tcp_sth_rcv_hiwat (read and write)
+tcp_sth_rcv_lowat (read and write)
+tcp_dupack_fast_retransmit (read and write)
+tcp_ignore_path_mtu (read and write)
+tcp_rcv_push_wait (read and write)
+tcp_smallest_anon_port (read and write)
+tcp_largest_anon_port (read and write)
+tcp_xmit_hiwat (read and write)
+tcp_xmit_lowat (read and write)
+tcp_recv_hiwat (read and write)
+tcp_recv_hiwat_minmss (read and write)
+tcp_fin_wait_2_flush_interval (read and write)
+tcp_co_min (read and write)
+tcp_max_buf (read and write)
+tcp_zero_win_probesize (read and write)
+tcp_strong_iss (read and write)
+tcp_rtt_updates (read and write)
+tcp_wscale_always (read and write)
+tcp_tstamp_always (read and write)
+tcp_tstamp_if_wscale (read and write)
+tcp_rexmit_interval_extra (read and write)
+tcp_deferred_acks_max (read and write)
+tcp_slow_start_after_idle (read and write)
+tcp_slow_start_initial (read and write)
+tcp_co_timer_interval (read and write)
+tcp_extra_priv_ports (read only)
+tcp_extra_priv_ports_add (write only)
+tcp_extra_priv_ports_del (write only)
+tcp_status (read only)
+tcp_bind_hash (read only)
+tcp_listen_hash (read only)
+tcp_conn_hash (read only)
+tcp_queue_hash (read only)
+tcp_host_param (read and write)
+tcp_1948_phrase (write only)
+
+
+# ndd -set /dev/ip ip_forwarding 0
+
+
